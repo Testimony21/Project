@@ -589,3 +589,75 @@ ul {
     font-size: 20px;
     overflow: hidden;
 }
+
+/* reviews */
+
+.reviews{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    float: left;
+}
+
+.feedback{
+    border: 1px solid #a97155;
+    height: 400px;
+    width: 300px;
+    overflow: hidden;
+    padding: 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border-radius: 30px;
+    background: white;
+    line-height: 30px;
+    margin-left: 10px;
+}
+
+.emily{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    color: rgb(172, 70, 70);
+    float: right;
+    /* padding-right: 50px; */
+    margin-top: 100px; 
+}
+
+.client{
+    justify-content: center;
+    align-items:center;
+    color: gray;
+    margin-top: 130px;
+    float: right;
+    font-family: "Birthstone", serif;
+    font-weight:500;
+    font-size:x-large;
+    overflow: hidden;
+}
+
+.container7{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.testimonial{
+    /* display: flex; */
+    float: right;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.testimonial-container{
+    color: rgb(172, 70, 70);
+    font-family: "Birthstone", serif;
+    font-size: xx-large;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.container7 h1{
+    font-family: "Shippori Mincho", serif;
+    font-weight: 200;
+    font-size: 50px;
+}
