@@ -575,3 +575,17 @@ ul {
     background-color: #8a5a42;
     color: bisque;
 }
+
+/* moving div */
+
+.moving{
+    display: flex;
+    flex-direction: row;
+    background-color: #8a5a42;
+    height: 80px;
+    padding: 20px;
+    font-family: "Shippori Mincho", serif;
+    font-weight: 80;
+    font-size: 20px;
+    overflow: hidden;
+}
