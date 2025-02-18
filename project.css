@@ -13,3 +13,131 @@ body {
 
 /* Navigation bar */
 
+.container1 {
+    left: 0;
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+}
+
+.hub {
+    font-family: "Birthstone", serif;
+    font-size: xx-large;
+    margin-top: 5px;
+    color: grey;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid white;
+    padding: 5px;
+    background-color: white;
+    width: 70vw;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    background: transparent;
+}
+
+.home,
+.about,
+.services,
+.page,
+.contact,
+.gallery {
+    text-decoration: none;
+    font-size: large;
+    color: gray;
+}
+
+:hover.home {
+    color: white;
+    background-color: grey;
+    padding: 10px;
+}
+
+:hover.about {
+    color: white;
+    background-color: grey;
+    padding: 10px;
+}
+
+:hover.services {
+    color: white;
+    background-color: grey;
+    padding: 10px;
+}
+
+:hover.page {
+    color: white;
+    background-color: grey;
+    padding: 10px;
+}
+
+:hover.contact {
+    color: white;
+    background-color: grey;
+    padding: 10px;
+}
+
+:hover.gallery {
+    color: white;
+    background-color: grey;
+    padding: 10px;
+}
+
+.btn {
+    background-color: bisque;
+    border-radius: 30px;
+    padding: 15px;
+    font-weight: bolder;
+    color: rgb(172, 70, 70);
+    border: 1px solid grey;
+}
+
+/* Hero section */
+
+.hero {
+    background-image: url('beauty12.jpg');
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 220px;
+    color: blanchedalmond;
+    height: fit-content;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(162, 97, 97, 0.7);
+    z-index: 1;
+}
+
+.add {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
