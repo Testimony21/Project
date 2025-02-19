@@ -36,22 +36,4 @@ document.addEventListener("DOMContentLoaded", function(){
         });
     }, {threshold: 0.5});
     progressBars.forEach(bar => observer.observe(bar));
-
-    // progressBars.forEach(bar =>{
-    //     let percent = bar.getAttribute("data-percent");
-    //     let count = 0;
-    //     let interval = setInterval(() =>{
-    //         if (count >= percent){
-    //             clearInterval(interval);
-    //         }else{
-    //             count++;
-    //             bar.style.width = count + "%"
-    //             bar.parentElement.previousElementSibling.querySelector(".percentage").textContent = count + "%"
-    //         }
-    //     }, 20);
-    //     observer.unobserve(bar);
-    // })
 })
-
-
-// console.log (document.querySelector('.hub').style.backgroundColor = 'green');
