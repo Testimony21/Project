@@ -495,13 +495,13 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: peachpuff;
+    background-color: rgba(255, 240, 245, 0.8);
     padding: 60px 20px;
 }
 
 .appointment-container{
     display: flex;
-    background: rgba(255, 240, 245, 0.8);
+    /* background: rgba(255, 240, 245, 0.8); */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -562,7 +562,7 @@ ul {
 }
  
 .appointment-form button{
-    background-color: bisque;
+    background-color: rgba(255, 240, 245, 0.8);;
     border-radius: 30px;
     padding: 15px;
     font-weight: bolder;
@@ -661,6 +661,189 @@ ul {
     font-weight: 200;
     font-size: 50px;
 }
+
+/* achievement counter block */
+.achievements{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: peachpuff;
+    justify-content: space-between;
+    color: rgb(172, 70, 70);
+    height: 150px;
+    overflow: hidden;
+}
+
+.counter{
+    font-family: "Shippori Mincho", serif;
+    font-weight: 900;
+    font-size: 50px;
+    padding-top: 30px;
+}
+
+.below{
+    font-family: "Shippori Mincho", serif;
+    font-weight: 100;
+    font-size: 25px;
+    padding-bottom: 30px;
+}
+
+/* unlock secrets  */
+
+.unlock-secrets{
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    overflow: hidden;
+    background-image: url("beauty12.jpg");
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.unlock-secrets::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(162, 97, 97, 0.7);
+    z-index: 1;
+}
+
+.white-background{
+    position: relative;
+    background-color: white;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    border-radius: 30px;
+    width: 700px;
+    height: 350px;
+    z-index: 2;
+}
+
+.white-background h1{
+    display: flex;
+    font-family: "Shippori Mincho", serif;
+    font-weight: 200;
+    font-size: 40px;
+    margin-bottom: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+.white-background p{
+    display: flex;
+    padding: 20px;
+    text-align: center;
+    margin: 0;
+    color: grey;
+    font-size: 17px;
+}
+
+.discover-button{
+    background-color: bisque;
+    border-radius: 30px;
+    padding: 15px;
+    font-weight: bolder;
+    color: rgb(172, 70, 70);
+    border: 1px solid grey;
+    cursor: pointer;
+}
+
+.discover-button:hover{
+    background-color: #8a5a42;
+    color: bisque;
+}
+
+/* skills and ability section */
+
+.skills{
+    float: left;
+}
+
+.ability{
+    float: right;
+    width: 50%;
+    height: 300px;
+    border-radius: 30px;
+    border: 1px solid rgb(172, 70, 70);
+}
+
+.skills span{
+    margin-top: 50px;
+    color: rgb(172, 70, 70);
+    font-family: "Birthstone", serif;
+    font-size: xx-large;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.skills h1{
+    font-family: "Shippori Mincho", serif;
+    font-weight: 200;
+    font-size: 50px;
+}
+
+.skills p{
+    color: grey;
+    line-height: 200%;
+}
+
+.skill{
+    margin-bottom: 20px;
+    text-align: left;
+    max-width: 600px;
+}
+
+.progress{
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar{
+    height: 100%;
+    width: 0%;
+    background-color: #c47b7b;
+    border-radius: 5px;
+    transition: width 2s ease-in-out;
+}
+
+.section2{
+    float: left;
+    width: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* footer */
 
