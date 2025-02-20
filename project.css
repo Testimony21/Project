@@ -10,13 +10,11 @@ body {
     overflow-x: hidden;
     background-color: rgba(255, 240, 245, 0.8);
     font-family: Georgia, 'Times New Roman', Times, serif;
-    margin: 20px;
 }
 
 /* Navigation bar */
 
 .container1 {
-    justify-content: space-between;
     align-content: space-between;
     position: sticky;
     background-color: white;
@@ -32,6 +30,7 @@ body {
     font-size: xx-large;
     margin-top: 5px;
     color: grey;
+    margin-left: 50px;
 }
 
 nav {
@@ -39,9 +38,11 @@ nav {
     justify-content: space-between;
     border: 1px solid white;
     background-color: white;
-    background: transparent;
+    margin-left: 50px;
+    margin-right: 50px;
+    /* background: transparent; */
     box-sizing: border-box;
-    align-items: center;
+    align-content: center;
     flex-wrap: wrap;
     display: flex;
     z-index: 1000;
@@ -54,63 +55,58 @@ nav {
 .home,
 .about,
 .services,
-.page,
 .contact,
 .gallery {
+    /* margin-left: 20px; */
+    justify-content: space-between;
+    display: flex;
     text-decoration: none;
     font-size: large;
     color: gray;
 }
 
-:hover.home {
+/* :hover.home {
     background-color: grey;
     color: white;
-    padding: 10px;
 }
 
 :hover.about {
     background-color: grey;
     color: white;
-    padding: 10px;
 }
 
 :hover.services {
-    background-color: grey;
     color: white;
-    padding: 10px;
 }
 
 :hover.page {
     background-color: grey;
     color: white;
-    padding: 10px;
 }
 
 :hover.contact {
     background-color: grey;
     color: white;
-    padding: 10px;
 }
 
 :hover.gallery {
     background-color: grey;
     color: white;
-    padding: 10px;
-}
+} */
 
-.btn {
+/* .btn {
     background-color: bisque;
     color: rgb(172, 70, 70);
     border: 1px solid grey;
     font-weight: bolder;
     border-radius: 30px;
     padding: 15px;
-}
+} */
 
 /* Hero section */
 
 .hero {
-    background-image: url('beauty12.jpg');
+    background-image: url('./images/beauty3.jpg');
     background-repeat: no-repeat;
     background-position: center;
     justify-content: center;
@@ -150,9 +146,13 @@ nav {
     padding: 20px;
     font-size: 50px;
     margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .luxury p {
+    margin-left: 50px;
+    margin-right: 50px;
     font-size: 25px;
     margin-bottom: 20px;
     font-family: "Birthstone", serif;
@@ -166,8 +166,15 @@ nav {
     justify-content: space-around;
     align-items: center;
     align-content: center;
-    background: peachpuff;
+    /* background: peachpuff; */
     height: 550px;
+}
+
+.image-row{
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: row;
 }
 
 .first,
@@ -175,11 +182,10 @@ nav {
 .third {
     border-radius: 10px;
     transition: filter 0.3s ease-in-out;
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     margin-top: 2px;
     border-radius: 20px;
-    border: 1px solid rgb(172, 70, 70);
 }
 
 .image-container,
@@ -203,8 +209,8 @@ nav {
     text-align: center;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    width: 350px;
+    height: 350px;
     border-radius: 20px;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
@@ -260,16 +266,19 @@ i {
 /* Beauty salon section */
 
 .salon {
-    margin-top: 85px;
     color: rgb(172, 70, 70);
     font-family: "Birthstone", serif;
     font-size: xx-large;
     font-weight: 700;
     margin-bottom: 20px;
+    
 }
 
 .container3 {
+    margin-top: 85px;
     border-radius: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .container3 h1 {
@@ -281,15 +290,18 @@ i {
 
 .image {
     float: right;
-    height: 535px;
+    height: 550px;
     width: 500px;
-    margin-top: 85px;
+    margin-top: 20px;
     display: block;
-    padding-right: 30px;
     border-radius: 30px;
-    border: 1px solid rgb(172, 70, 70);
     padding: 1px;
     margin-right: 5px;
+    margin-left: 50px;
+}
+
+.elegance{
+    width: 50%;
 }
 
 .container3 p,
@@ -303,7 +315,7 @@ ul {
 
 /* Why choose us section */
 
-.choose {
+/* .choose {
     margin-top: 25px;
     color: rgb(172, 70, 70);
     font-family: "Birthstone", serif;
@@ -364,7 +376,6 @@ ul {
     padding: 1px;
     margin-left: 5px;
     margin-right: 15px;
-    /* padding-right: 20px; */
 }
 
 #experience-number {
@@ -381,7 +392,6 @@ ul {
     border-radius: 20px;
     color: black;
     font-weight: bold;
-    /* margin-top: 200px; */
     text-align: center;
     margin-top: 15px;
     position: absolute;
@@ -393,11 +403,11 @@ ul {
 .years {
     font-weight: lighter;
     color: gray;
-}
+} */
 
 /* What we offer section */
 
-.container5 {
+/* .container5 {
     margin-top: 150px;
     display: flex;
     align-items: center;
@@ -412,7 +422,6 @@ ul {
     font-size: xx-large;
     font-weight: 700;
     margin-bottom: 20px;
-    /* padding-left: 20px; */
 }
 
 .offers {
@@ -459,7 +468,7 @@ ul {
     color: white;
     padding: 20px;
     width: 100%;
-    /* text-align: center; */
+    text-align: center;
     font-size: 16px;
     line-height: 1.9;
     overflow: hidden;
@@ -481,56 +490,55 @@ ul {
     font-size: 15px;
     margin: 0;
     color: black;
-}
+} */
 
 /* second picture section for what we offer */
 
-.part2 {
+/* .part2 {
     display: flex;
     justify-content: space-between;
     gap: 20px;
     padding: 20px;
-}
+} */
 
 /* Booking form container */
 
 .container6{
+    margin-top: 85px;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
-    background-color: rgba(255, 240, 245, 0.8);
-    padding: 60px 20px;
+    justify-content: center;
+    background-color: rgba(255, 240, 245, 0.8); 
+    width: 1200px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
-.appointment-container{
-    display: flex;
-    /* background: rgba(255, 240, 245, 0.8); */
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 2000px;
-    width: 100%;
-    border: 1px solid #a97155;
+.appointment-form{
+    float: right;
+    margin-left: 30px;
 }
 
 .container6 label{
     color: rgb(172, 70, 70);
+    display: flex;
+    overflow: hidden;
+    max-width: 2000px;
+    width: 500px;
 }
 
-.appointment-image{
+/* .appointment-image{
     width: 30%;
     background: url("./images/beauty12.jpg");
     opacity: 0.8;
     height: 620px;
     overflow: hidden;
-}
+} */
 
-.appointment-content{
-    width: 100%;
-    padding: 40px;
-}
-
-.appointment-content h1{
+.para h1{
     font-family: "Shippori Mincho", serif;
     font-weight: 200;
     font-size: 40px;
@@ -538,7 +546,6 @@ ul {
     line-height: 100%;
     color: #333;
     overflow: hidden;
-
 }
 
 .para{
@@ -549,7 +556,7 @@ ul {
     float: left;
     justify-items: center;
     align-content: space-around;
-    width: 300px;
+    width: 500px;
     margin-top: 50px;
     line-height: 150%;
 }
@@ -579,20 +586,6 @@ ul {
     color: bisque;
 }
 
-/* moving div */
-
-.moving{
-    display: flex;
-    flex-direction: row;
-    background-color: #8a5a42;
-    height: 80px;
-    padding: 20px;
-    font-family: "Shippori Mincho", serif;
-    font-weight: 80;
-    font-size: 20px;
-    overflow: hidden;
-}
-
 /* reviews */
 
 .reviews{
@@ -601,10 +594,13 @@ ul {
     flex-wrap: wrap;
     justify-content: space-between;
     float: left;
+    margin-left: 50px;
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
 }
 
 .feedback{
-    border: 1px solid #a97155;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* border: 1px solid #a97155; */
     height: 400px;
     width: 300px;
     overflow: hidden;
@@ -649,6 +645,7 @@ ul {
     float: right;
     flex-direction: column;
     margin-top: 100px;
+    margin-right: 50px;
 }
 
 .testimonial-container{
@@ -665,18 +662,21 @@ ul {
     font-size: 50px;
 }
 
+
 /* achievement counter block */
-.achievements{
+.container8{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     background-color: peachpuff;
     justify-content: space-between;
     color: rgb(172, 70, 70);
     height: 150px;
     overflow: hidden;
+    /* margin-top: 500px; */
 }
 
-.counter{
+/* .counter{
     font-family: "Shippori Mincho", serif;
     font-weight: 900;
     font-size: 50px;
@@ -688,7 +688,7 @@ ul {
     font-weight: 100;
     font-size: 25px;
     padding-bottom: 30px;
-}
+} */
 
 /* unlock secrets  */
 
