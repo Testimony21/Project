@@ -61,15 +61,6 @@ nav {
     color: gray;
 }
 
-/* .btn {
-    background-color: bisque;
-    color: rgb(172, 70, 70);
-    border: 1px solid grey;
-    font-weight: bolder;
-    border-radius: 30px;
-    padding: 15px;
-} */
-
 /* Hero section */
 
 .hero {
@@ -135,13 +126,15 @@ nav {
     align-content: center;
     /* background: peachpuff; */
     height: 550px;
-    margin-left: 50px;
-    margin-right: 50px;
+    /* margin-left: 50px;
+    margin-right: 50px; */
 }
 
 .image-row{
     display: flex;
     flex-direction: row;
+    margin-left: 50px;
+    /* margin-right: 50px; */
 }
 
 .first,
@@ -859,6 +852,7 @@ footer{
 .footer-container{
     display: flex;
     justify-content: space-between;
+    line-height: 50px;
     max-width: 1200px;
     margin: auto;
     flex-wrap: wrap;
