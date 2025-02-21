@@ -52,11 +52,7 @@ nav {
     left: 0;
 }
 
-.home,
-.about,
-.services,
-.contact,
-.gallery {
+.nav-link{
     /* margin-left: 20px; */
     justify-content: space-between;
     display: flex;
@@ -64,35 +60,6 @@ nav {
     font-size: large;
     color: gray;
 }
-
-/* :hover.home {
-    background-color: grey;
-    color: white;
-}
-
-:hover.about {
-    background-color: grey;
-    color: white;
-}
-
-:hover.services {
-    color: white;
-}
-
-:hover.page {
-    background-color: grey;
-    color: white;
-}
-
-:hover.contact {
-    background-color: grey;
-    color: white;
-}
-
-:hover.gallery {
-    background-color: grey;
-    color: white;
-} */
 
 /* .btn {
     background-color: bisque;
@@ -155,7 +122,7 @@ nav {
     margin-right: 50px;
     font-size: 25px;
     margin-bottom: 20px;
-    font-family: "Birthstone", serif;
+    font-family: "Shippori Mincho", serif
 }
 
 /* Row of pictures after the hero section */
@@ -168,11 +135,11 @@ nav {
     align-content: center;
     /* background: peachpuff; */
     height: 550px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .image-row{
-    margin-left: 50px;
-    margin-right: 50px;
     display: flex;
     flex-direction: row;
 }
@@ -267,7 +234,7 @@ i {
 
 .salon {
     color: rgb(172, 70, 70);
-    font-family: "Birthstone", serif;
+    font-family: "Shippori Mincho", serif;
     font-size: xx-large;
     font-weight: 700;
     margin-bottom: 20px;
@@ -629,9 +596,9 @@ ul {
     color: gray;
     margin-top: 130px;
     float: right;
-    font-family: "Birthstone", serif;
+    font-family: "Shippori Mincho", serif;
     font-weight:500;
-    font-size:x-large;
+    font-size:large;
     overflow: hidden;
 }
 
@@ -650,7 +617,7 @@ ul {
 
 .testimonial-container{
     color: rgb(172, 70, 70);
-    font-family: "Birthstone", serif;
+    font-family: "Shippori Mincho", serif;
     font-size: xx-large;
     font-weight: 700;
     margin-bottom: 20px;
@@ -795,7 +762,7 @@ ul {
 .skills span{
     margin-top: 50px;
     color: rgb(172, 70, 70);
-    font-family: "Birthstone", serif;
+    font-family: "Shippori Mincho", serif;
     font-size: xx-large;
     font-weight: 700;
     margin-bottom: 20px;
@@ -879,6 +846,90 @@ ul {
 /* footer */
 
 footer{
+    clear: both;
+    background-color: #e5b1a1;
+}
+
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.footer-section h4{
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-section ul{
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover{
+    color: #8a5a42;
+}
+
+.social-icons i{
+    font-size: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.footer-bottom{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-bottom p{
+    margin-left: 50px;
+    /* float: left; */
+    color: white;
+}
+
+.footer-links a{
+    color: white;
+    float: right;
+    margin-right: 50px;
+    /* margin: 0 10px; */
+
+    text-decoration: none;
+}
+
+
+/* html{
+    scroll-behavior: smooth;
+}
+
+.footer-menu{
+    background-color: #c47b7b;
+    padding: 4px 0;
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+}
+
+.menu, .body, .info{
+    flex-direction: column;
+} */
+
+/* .last{
     display: flex;
     background-color: burlywood;
     flex-wrap: wrap;
@@ -886,23 +937,28 @@ footer{
     padding: 10px;
 }
 
-footer .copyright{
+.copyright{
     float: left;
     padding: 10px;
 }
 
-footer .terms{
+.terms{
     display: flex;
     float: right;
     flex-direction: row;
 }
 
+.one{
+    border-right: 1px solid white;
+    padding: 10px;
+}
 
-.one, .privacy{
+
+.privacy{
     border-right: 1px solid white;
     padding: 10px;
 }
 
 .cookie{
     padding: 10px;
-}
+} */
