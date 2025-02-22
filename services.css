@@ -402,7 +402,7 @@ i {
     float: right;
     width: 42%;
     border-radius: 30px;
-    height: 545px;
+    height: 525px;
 }
 
 .percentage{
@@ -478,6 +478,81 @@ i {
 .section{
     width: 42%;
 }
+
+.unlock-secrets{
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    overflow: hidden;
+    background-image: url("./images/beauty12.jpg");
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.unlock-secrets::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(162, 97, 97, 0.7);
+    z-index: 1;
+}
+
+.white-background{
+    position: relative;
+    background-color: white;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    border-radius: 30px;
+    width: 700px;
+    height: 350px;
+    z-index: 2;
+}
+
+.white-background h1{
+    display: flex;
+    font-family: "Shippori Mincho", serif;
+    font-weight: 200;
+    font-size: 40px;
+    margin-bottom: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+.white-background p{
+    display: flex;
+    padding: 20px;
+    text-align: center;
+    margin: 0;
+    color: grey;
+    font-size: 17px;
+}
+
+.discover-button{
+    background-color: bisque;
+    border-radius: 30px;
+    padding: 15px;
+    font-weight: bolder;
+    color: rgb(172, 70, 70);
+    border: 1px solid grey;
+    cursor: pointer;
+}
+
+.discover-button:hover{
+    background-color: #8a5a42;
+    color: bisque;
+}
+
 
 
 /* footer section */

@@ -55,7 +55,7 @@ nav {
 }
 
 .hero {
-    background-image: url('./images/beauty3.jpg');
+    background-image: url('./images/beauty2.jpg');
     background-repeat: no-repeat;
     background-position: center;
     justify-content: center;
@@ -63,7 +63,7 @@ nav {
     background-size: cover;
     padding: 100px 220px;
     align-items: center;
-    height: 100vh;
+    height: 70vh;
     position: relative;
     text-align: center;
     flex-wrap: wrap;
@@ -88,23 +88,6 @@ nav {
     color: white;
     text-align: center;
     padding: 20px;
-}
-
-.luxury h1 {
-    width: 100%;
-    padding: 20px;
-    font-size: 50px;
-    margin-bottom: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
-}
-
-.luxury p {
-    margin-left: 50px;
-    margin-right: 50px;
-    font-size: 25px;
-    margin-bottom: 20px;
-    font-family: "Shippori Mincho", serif
 }
 
 /* Row of pictures after the hero section */
