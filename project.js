@@ -1,19 +1,4 @@
 document.addEventListener("DOMContentLoaded", function(){
-    let count = 1;
-    let target = 16;
-    let speed = 100;
-
-    let interval = setInterval(() =>{
-        if (count < target){
-            count++;
-            document.getElementById("experience-number").textContent = count;
-        }else{
-            clearInterval(interval);
-        }
-    }, speed);
-});
-
-document.addEventListener("DOMContentLoaded", function(){
     const progressBars = document.querySelectorAll(".progress-bar");
 
     const observer = new  IntersectionObserver(entries =>{
