@@ -27,6 +27,7 @@ body {
     width: auto;
     margin-left: 50px;
     padding-top: 3px;
+    padding-bottom: 3px;
 }
 
 nav {
@@ -53,6 +54,7 @@ nav {
     font-size: large;
     color: gray;
 }
+
 
 .hero {
     background-image: url('./images/beauty2.jpg');
@@ -187,4 +189,453 @@ i {
     display: inline-block;
     margin-left: 5px;
     margin-bottom: 0;
+}
+
+.salon {
+    color: rgb(172, 70, 70);
+    font-family: "Shippori Mincho", serif;
+    font-size: xx-large;
+    font-weight: 700;
+    margin-bottom: 20px;
+    
+}
+
+.container3 {
+    margin-top: 25px;
+    border-radius: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.container3 h1 {
+    font-family: "Shippori Mincho", serif;
+    font-weight: 200;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.image {
+    float: right;
+    height: 460px;
+    width: 40%;
+    margin-top: 10px;
+    display: block;
+    border-radius: 30px;
+    padding: 1px;
+    margin-right: 5px;
+    margin-left: 50px;
+}
+
+.elegance{
+    width: 50%;
+}
+
+.container3 p,
+ul {
+    color: grey;
+    line-height: 150%;
+    padding-right: 100px;
+    font-size: 16px;
+    margin-top: 18px;
+}
+
+/* Booking form container */
+
+.container6{
+    margin-top: 85px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 240, 245, 0.8); 
+    width: 1200px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.appointment-form{
+    float: right;
+    margin-left: 30px;
+}
+
+.container6 label{
+    color: rgb(172, 70, 70);
+    display: flex;
+    overflow: hidden;
+    max-width: 2000px;
+    width: 500px;
+}
+
+.para h1{
+    font-family: "Shippori Mincho", serif;
+    font-weight: 200;
+    font-size: 40px;
+    margin-bottom: 20px;
+    line-height: 100%;
+    color: #333;
+    overflow: hidden;
+}
+
+.para{
+    color: gray;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    float: left;
+    justify-items: center;
+    align-content: space-around;
+    width: 500px;
+    margin-top: 50px;
+    line-height: 150%;
+}
+
+.appointment-form input, .appointment-form textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid grey;
+    border-radius: 15px;
+    font-size: 14px;
+    float: right;
+}
+ 
+.appointment-form button{
+    background-color: rgba(255, 240, 245, 0.8);;
+    border-radius: 30px;
+    padding: 15px;
+    font-weight: bolder;
+    color: rgb(172, 70, 70);
+    border: 1px solid grey;
+    cursor: pointer;
+}
+
+.appointment-form button:hover{
+    background-color: #8a5a42;
+    color: bisque;
+}
+
+/* skills and ability section */
+
+.skills{
+    margin-left: 50px;
+    margin-right: 50px;
+    flex-direction: column;
+    float: left;
+    margin-top: 100px;
+    margin-bottom: 85px;
+}
+
+.ability{
+    float: right;
+    width: 42%;
+    border-radius: 30px;
+    height: 525px;
+}
+
+.percentage{
+    min-width: 40px;
+    text-align: right;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.skills span{
+    margin-top: 50px;
+    color: rgb(172, 70, 70);
+    font-family: "Shippori Mincho", serif;
+    font-size: large;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.skills h1{
+    font-family: "Shippori Mincho", serif;
+    font-weight: 200;
+    font-size: 50px;
+}
+
+.section p{
+    color: grey;
+    line-height: 150%;
+    margin-top: 18px;
+}
+
+.skill{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    text-align: left;
+    max-width: 600px;
+    line-height: 2px;
+}
+
+.skill p{
+    margin: 0;
+    flex: 1;
+    text-align: left;
+    font-size: 18px;
+    font-family: "Shippori Mincho", serif;
+    line-height: 1px;
+    color: rgb(172, 70, 70);
+}
+
+.progress{
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 2px;
+}
+
+.progress-bar{
+    height: 100%;
+    width: 0%;
+    background-color: #c47b7b;
+    border-radius: 5px;
+    transition: width 2s ease-in-out;
+}
+
+.section2{
+    float: left;
+    width: 42%;
+}
+
+.section{
+    width: 42%;
+}
+
+.unlock-secrets{
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    overflow: hidden;
+    background-image: url("./images/beauty12.jpg");
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.unlock-secrets::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(162, 97, 97, 0.7);
+    z-index: 1;
+}
+
+.white-background{
+    position: relative;
+    background-color: white;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    border-radius: 30px;
+    width: 700px;
+    height: 350px;
+    z-index: 2;
+}
+
+.white-background h1{
+    display: flex;
+    font-family: "Shippori Mincho", serif;
+    font-weight: 200;
+    font-size: 40px;
+    margin-bottom: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+.white-background p{
+    display: flex;
+    padding: 20px;
+    text-align: center;
+    margin: 0;
+    color: grey;
+    font-size: 17px;
+}
+
+.discover-button{
+    background-color: bisque;
+    border-radius: 30px;
+    padding: 15px;
+    font-weight: bolder;
+    color: rgb(172, 70, 70);
+    border: 1px solid grey;
+    cursor: pointer;
+}
+
+.discover-button:hover{
+    background-color: #8a5a42;
+    color: bisque;
+}
+
+
+
+/* footer section */
+
+footer{
+    clear: both;
+    background-color: #e5b1a1;
+}
+
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    line-height: 50px;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.footer-section h4{
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-section ul{
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover{
+    color: #8a5a42;
+}
+
+.social-icons i{
+    font-size: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.footer-bottom{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-bottom p{
+    margin-left: 50px;
+    /* float: left; */
+    color: white;
+}
+
+.footer-links a{
+    color: white;
+    float: right;
+    margin-right: 50px;
+    /* margin: 0 10px; */
+    text-decoration: none;
+}
+
+footer{
+    clear: both;
+    background-color: #e5b1a1;
+}
+
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    line-height: 50px;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.footer-section h2{
+    font-size: 30px;
+    margin-bottom: 15px;
+    font-family: "Mincho", serif;
+}
+
+.footer-section ul{
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover{
+    color: #8a5a42;
+}
+
+.social-icons i{
+    font-size: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.footer-bottom{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-bottom p{
+    margin-left: 50px;
+    /* float: left; */
+    color: white;
+}
+
+.footer-links a{
+    color: white;
+    float: right;
+    margin-right: 50px;
+    /* margin: 0 10px; */
+    text-decoration: none;
+}
+
+.social-icons .fa-instagram, .fa-youtube, .fa-x-twitter{
+    color: white;
+    padding: 10px;
+} 
+
+.fa-facebook{
+    color: white;
+    /* padding: 10px; */
+    padding-left: 0;
+}
+
+.fa-location-dot, .fa-phone, .fa-envelope{
+    color: white;
+} 
+
+.contact li{
+    color: white;
 }
