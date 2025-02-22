@@ -161,7 +161,7 @@ nav {
     justify-content: center;
     align-items: center;
     width: 350px;
-    height: 350px;
+    height: 352px;
     border-radius: 20px;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
@@ -698,54 +698,3 @@ footer{
 
     text-decoration: none;
 }
-
-
-/* html{
-    scroll-behavior: smooth;
-}
-
-.footer-menu{
-    background-color: #c47b7b;
-    padding: 4px 0;
-    display: flex;
-    justify-content: space-around;
-    text-align: left;
-}
-
-.menu, .body, .info{
-    flex-direction: column;
-} */
-
-/* .last{
-    display: flex;
-    background-color: burlywood;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 10px;
-}
-
-.copyright{
-    float: left;
-    padding: 10px;
-}
-
-.terms{
-    display: flex;
-    float: right;
-    flex-direction: row;
-}
-
-.one{
-    border-right: 1px solid white;
-    padding: 10px;
-}
-
-
-.privacy{
-    border-right: 1px solid white;
-    padding: 10px;
-}
-
-.cookie{
-    padding: 10px;
-} */

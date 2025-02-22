@@ -53,3 +53,155 @@ nav {
     font-size: large;
     color: gray;
 }
+
+.hero {
+    background-image: url('./images/beauty3.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: center;
+    color: blanchedalmond;
+    background-size: cover;
+    padding: 100px 220px;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+    flex-wrap: wrap;
+    display: flex;
+    width: 100%;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(162, 97, 97, 0.7);
+    z-index: 1;
+}
+
+.add {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.luxury h1 {
+    width: 100%;
+    padding: 20px;
+    font-size: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.luxury p {
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 25px;
+    margin-bottom: 20px;
+    font-family: "Shippori Mincho", serif
+}
+
+/* Row of pictures after the hero section */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    height: 550px;
+}
+
+.image-row{
+    display: flex;
+    flex-direction: row;
+    margin-left: 50px;
+}
+
+.first,
+.second,
+.third {
+    border-radius: 10px;
+    transition: filter 0.3s ease-in-out;
+    width: 350px;
+    height: 350px;
+    margin-top: 2px;
+    border-radius: 20px;
+}
+
+.image-container,
+.products,
+.inviting {
+    position: relative;
+    width: 400px;
+}
+
+.overlay,
+.lux,
+.relaxing {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(162, 97, 97, 0.7);
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 352px;
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    font-size: 2em;
+    font-weight: 400;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.image-container:hover .first {
+    filter: brightness(70%);
+
+}
+
+.products:hover .lux {
+    opacity: 1;
+}
+
+.products:hover .second {
+    filter: brightness(70%);
+}
+
+.inviting:hover .relaxing {
+    opacity: 1;
+}
+
+.inviting:hover .third {
+    filter: brightness(70%);
+}
+
+.button {
+    padding: 20px;
+    background: bisque;
+    color: brown;
+    text-decoration: none;
+    border-radius: 30px;
+    border: 1px solid rgb(172, 70, 70);
+    margin-top: 10px;
+}
+
+i {
+    font-size: 16px;
+    color: grey;
+    display: inline-block;
+    margin-left: 5px;
+    margin-bottom: 0;
+}
