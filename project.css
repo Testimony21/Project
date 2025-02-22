@@ -110,7 +110,7 @@ nav {
     margin-right: 50px;
     font-size: 25px;
     margin-bottom: 20px;
-    font-family: "Shippori Mincho", serif
+    font-family: "Shippori Mincho", serif;
 }
 
 /* Row of pictures after the hero section */
@@ -532,10 +532,9 @@ ul {
 
 .ability{
     float: right;
-    width: 40%;
-    /* height: 300px; */
+    width: 42%;
     border-radius: 30px;
-    height: 450px;
+    height: 545px;
 }
 
 .percentage{
@@ -549,7 +548,7 @@ ul {
     margin-top: 50px;
     color: rgb(172, 70, 70);
     font-family: "Shippori Mincho", serif;
-    font-size: xx-large;
+    font-size: large;
     font-weight: 700;
     margin-bottom: 20px;
 }
@@ -562,7 +561,8 @@ ul {
 
 .section p{
     color: grey;
-    line-height: 200%;
+    line-height: 150%;
+    margin-top: 18px;
 }
 
 .skill{
@@ -572,18 +572,22 @@ ul {
     margin-bottom: 5px;
     text-align: left;
     max-width: 600px;
+    line-height: 2px;
 }
 
 .skill p{
     margin: 0;
     flex: 1;
     text-align: left;
-    font-size: 14px;
+    font-size: 18px;
+    font-family: "Shippori Mincho", serif;
+    line-height: 1px;
+    color: rgb(172, 70, 70);
 }
 
 .progress{
     width: 100%;
-    height: 8px;
+    height: 10px;
     background-color: #e0e0e0;
     border-radius: 5px;
     overflow: hidden;
@@ -600,11 +604,11 @@ ul {
 
 .section2{
     float: left;
-    width: 50%;
+    width: 42%;
 }
 
 .section{
-    width: 50%;
+    width: 42%;
 }
 
 
@@ -653,9 +657,10 @@ footer{
     margin-right: 50px;
 }
 
-.footer-section h4{
-    font-size: 18px;
+.footer-section h2{
+    font-size: 30px;
     margin-bottom: 15px;
+    font-family: "Mincho", serif;
 }
 
 .footer-section ul{
@@ -695,6 +700,25 @@ footer{
     float: right;
     margin-right: 50px;
     /* margin: 0 10px; */
-
     text-decoration: none;
 }
+
+.social-icons .fa-instagram, .fa-youtube, .fa-x-twitter{
+    color: white;
+    padding: 10px;
+} 
+
+.fa-facebook{
+    color: white;
+    /* padding: 10px; */
+    padding-left: 0;
+}
+
+.fa-location-dot, .fa-phone, .fa-envelope{
+    color: white;
+} 
+
+.contact li{
+    color: white;
+}
+
