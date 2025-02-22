@@ -50,6 +50,8 @@ nav {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .offer-container {
@@ -62,6 +64,8 @@ nav {
 }
 
 .offers {
+    margin-left: 50px;
+    margin-right: 50px;
     display: flex;
     justify-content: space-between;
     gap: 20px;
@@ -71,7 +75,7 @@ nav {
 .offer {
     opacity: 0.9;
     position: relative;
-    width: 50%;
+    width: fit-content;
     overflow: hidden;
     border-radius: 30px;
 }
@@ -105,7 +109,7 @@ nav {
     color: white;
     padding: 20px;
     width: 100%;
-    text-align: center;
+    /* text-align: center; */
     font-size: 16px;
     line-height: 1.9;
     overflow: hidden;
@@ -127,6 +131,7 @@ nav {
     font-size: 15px;
     margin: 0;
     color: black;
+    padding: 5px;
 }
 
 /* second picture section for what we offer */
