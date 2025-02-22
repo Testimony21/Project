@@ -92,6 +92,13 @@ nav {
     padding: 20px;
 }
 
+.luxury h1 {
+    width: 100%;
+    padding: 20px;
+    font-size: 60px;
+    margin-bottom: 50px;
+}
+
 /* Row of pictures after the hero section */
 
 .row {
