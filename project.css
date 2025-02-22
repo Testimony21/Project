@@ -121,17 +121,13 @@ nav {
     justify-content: space-around;
     align-items: center;
     align-content: center;
-    /* background: peachpuff; */
     height: 550px;
-    /* margin-left: 50px;
-    margin-right: 50px; */
 }
 
 .image-row{
     display: flex;
     flex-direction: row;
     margin-left: 50px;
-    /* margin-right: 50px; */
 }
 
 .first,

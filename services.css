@@ -1,3 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: rgba(255, 240, 245, 0.8);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 /* Navigation bar */
 
 .container1 {
@@ -89,6 +101,17 @@ nav {
     font-family: "Shippori Mincho", serif
 }
 
+.button {
+    padding: 20px;
+    background: bisque;
+    color: brown;
+    text-decoration: none;
+    border-radius: 30px;
+    border: 1px solid rgb(172, 70, 70);
+    margin-top: 10px;
+}
+
+
 
 .nav-link{
     justify-content: space-between;
@@ -97,6 +120,104 @@ nav {
     font-size: large;
     color: gray;
 }
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    height: 550px;
+}
+
+.image-row{
+    display: flex;
+    flex-direction: row;
+    margin-left: 50px;
+}
+
+.first,
+.second,
+.third {
+    border-radius: 10px;
+    transition: filter 0.3s ease-in-out;
+    width: 350px;
+    height: 350px;
+    margin-top: 2px;
+    border-radius: 20px;
+}
+
+.image-container,
+.products,
+.inviting {
+    position: relative;
+    width: 400px;
+}
+
+.overlay,
+.lux,
+.relaxing {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(162, 97, 97, 0.7);
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 350px;
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    font-size: 2em;
+    font-weight: 400;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.image-container:hover .first {
+    filter: brightness(70%);
+
+}
+
+.products:hover .lux {
+    opacity: 1;
+}
+
+.products:hover .second {
+    filter: brightness(70%);
+}
+
+.inviting:hover .relaxing {
+    opacity: 1;
+}
+
+.inviting:hover .third {
+    filter: brightness(70%);
+}
+
+.button {
+    padding: 20px;
+    background: bisque;
+    color: brown;
+    text-decoration: none;
+    border-radius: 30px;
+    border: 1px solid rgb(172, 70, 70);
+    margin-top: 10px;
+}
+/* 
+i {
+    font-size: 16px;
+    color: grey;
+    display: inline-block;
+    margin-left: 5px;
+    margin-bottom: 0;
+} */
+
 
 .container5 {
     margin-top: 150px;
