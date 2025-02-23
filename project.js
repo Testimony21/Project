@@ -36,3 +36,18 @@ document.addEventListener("DOMContentLoaded", function(){
     }, {threshold: 1});
     h1Elements.forEach(h1 => observer.observe(h1));
 });
+
+const reviews = document.querySelector ('.reviews');
+const reviewItems = document.querySelectorAll('.feedback');
+
+let index = 0;
+
+function slideReviews() {
+    index++;
+    if (index > reviewItems.length- 2) {
+        index = 0;
+    } 
+    reviews.style.transform = `translateX(-${index * 320}px)`;
+}
+
+setInterval(slideReviews, 3000);

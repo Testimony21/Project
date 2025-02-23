@@ -250,7 +250,7 @@ i {
 
 .image {
     float: right;
-    height: 550px;
+    height: 500px;
     width: 40%;
     margin-top: 20px;
     display: block;
@@ -352,6 +352,12 @@ ul {
 
 /* reviews */
 
+.reviews-container{
+    width: 640px;
+    overflow: hidden;
+    position: relative;
+}
+
 .reviews{
     display: flex;
     flex-direction: row;
@@ -359,12 +365,15 @@ ul {
     justify-content: space-between;
     float: left;
     margin-left: 50px;
-    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+    overflow: hidden;
+    animation: slide 10s linear infinite;
+    gap: 20px;
+    width:max-content;
+    transition: transform 1s ease-in-out;
 }
 
 .feedback{
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    /* border: 1px solid #a97155; */
     height: 400px;
     width: 300px;
     overflow: hidden;
@@ -382,8 +391,7 @@ ul {
     justify-content: center;
     align-items:center;
     color: rgb(172, 70, 70);
-    float: right;
-    /* padding-right: 50px; */
+    float: left;
     margin-top: 100px; 
 }
 
@@ -392,7 +400,7 @@ ul {
     align-items:center;
     color: gray;
     margin-top: 130px;
-    float: right;
+    float: left;
     font-family: "Shippori Mincho", serif;
     font-weight:500;
     font-size:large;
@@ -405,11 +413,19 @@ ul {
 }
 
 .testimonial{
-    /* display: flex; */
     float: right;
     flex-direction: column;
     margin-top: 100px;
     margin-right: 50px;
+    width: 40%;
+}
+
+.testimonial p{
+    color: grey;
+    line-height: 200%;
+    padding-right: 100px;
+    font-size: 16px;
+    margin-top: 18px;
 }
 
 .testimonial-container{
@@ -420,12 +436,18 @@ ul {
     margin-bottom: 20px;
 }
 
-.container7 h1{
+.testimonial h1{
     font-family: "Shippori Mincho", serif;
     font-weight: 200;
     font-size: 50px;
 }
 
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-320px); }
+    66% { transform: translateX(-640px); }
+    100% { transform: translateX(0); }
+}
 
 /* achievement counter block */
 .container8{
@@ -545,7 +567,7 @@ ul {
     float: right;
     width: 42%;
     border-radius: 30px;
-    height: 545px;
+    height: 530px;
 }
 
 .percentage{
@@ -671,12 +693,13 @@ footer{
 .footer-section h2{
     font-size: 30px;
     margin-bottom: 15px;
-    font-family: "Mincho", serif;
+    font-family: "Shippori Mincho", serif;
 }
 
 .footer-section ul{
     list-style: none;
     padding: 0;
+    line-height: 40px;
 }
 
 .footer-section ul li a{
@@ -710,23 +733,22 @@ footer{
     color: white;
     float: right;
     margin-right: 50px;
-    /* margin: 0 10px; */
     text-decoration: none;
 }
 
 .social-icons .fa-instagram, .fa-youtube, .fa-x-twitter{
-    color: white;
+    color: rgb(172, 70, 70);
     padding: 10px;
 } 
 
 .fa-facebook{
-    color: white;
+    color: rgb(172, 70, 70);
     /* padding: 10px; */
     padding-left: 0;
 }
 
 .fa-location-dot, .fa-phone, .fa-envelope{
-    color: white;
+    color: rgb(172, 70, 70);
 } 
 
 .contact li{
