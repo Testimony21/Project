@@ -96,6 +96,17 @@ nav {
     padding: 20px;
 }
 
+h1{
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+    
+.animate{
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .luxury h1 {
     width: 100%;
     padding: 20px;

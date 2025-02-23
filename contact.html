@@ -1,8 +1,9 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Birthstone&family=Cedarville+Cursive&family=Yuji+Mai&display=swap"
@@ -18,49 +19,138 @@
         integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
+    <link rel="stylesheet" href="contact.css">
 </head>
+
 <body>
+    <div class="flex-container container1">
+        <div class="logo">
+            <img src="./images/logo.jpg" alt="">
+        </div>
+        <nav>
+            <a href="project.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="gallery.html" class="nav-link">Gallery</a>
+            <a href="contact.html" class="nav-link">Contact Us</a>
+        </nav>
+    </div>
+
+    <div class="hero">
+        <div class="add">
+            <div class="luxury">
+                <h1>About Us</h1>
+            </div>
+        </div>
+    </div>
+
     <!-- Booking form container -->
 
     <div class="flex-container container6">
         <div class="para">
-            <h1>Book Your Appointment Now!</h1>
-            <p>Contact us today to book your exclusive beauty treatment and enjoy a pampering experience like no
-                other.</p>
+            <h1>Get In Touch</h1>
+            <p>We value your feedback and strive to provide exceptional customer service. If you have any suggestions,
+                comments, or concerns, please don't hesitate to reach out.</p>
+                <div class="follow"><h3>Follow Us</h3></div>
+                <div class="social-icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
+                </div>
         </div>
-        <form class="appointment-form">
-            <label for="name">Your Name</label>
-            <br>
-            <input type="text" required placeholder="Your Name" class="name">
-            <br>
+        <div class="appointment-form">
+            <form>
+                <label for="name">Your Name</label>
+                <br>
+                <input type="text" required placeholder="Your Name" class="name">
+                <br>
 
-            <label for="email">E-mail Address</label>
-            <br>
-            <input type="email" required placeholder="E-mail" class="email">
-            <br>
+                <label for="email">E-mail Address</label>
+                <br>
+                <input type="email" required placeholder="E-mail" class="email">
+                <br>
 
-            <label for="phone">Phone Number</label>
-            <br>
-            <input type="tel" required placeholder="Phone Number" class="phone">
-            <br>
+                <label for="phone">Phone Number</label>
+                <br>
+                <input type="tel" required placeholder="Phone Number" class="phone">
+                <br>
 
-            <label for="date">Date</label>
-            <br>
-            <input type="date" class="date" required>
-            <br>
+                <label for="date">Date</label>
+                <br>
+                <input type="date" class="date" required>
+                <br>
 
-            <label for="time">Time</label>
-            <br>
-            <input type="time" required class="time">
-            <br>
+                <label for="time">Time</label>
+                <br>
+                <input type="time" required class="time">
+                <br>
 
-            <label for="message">Messages</label>
-            <br>
-            <textarea class="message" placeholder="Input Message Here"></textarea>
-            <br>
+                <label for="message">Messages</label>
+                <br>
+                <textarea class="message" placeholder="Input Message Here"></textarea>
+                <br>
 
-            <button type="submit" class="appointment-button">Make Appointment</button>
+                <button type="submit" class="appointment-button">Make Appointment</button>
+        </div>
         </form>
     </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section menu">
+                <h4>Menu</h4>
+                <ul>
+                    <li><a href="project.html.html">Homepage</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">FAQ's</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section services">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Nail Art and Polish</a></li>
+                    <li><a href="#">Haircut and Treatment</a></li>
+                    <li><a href="#">Hair Coloring</a></li>
+                    <li><a href="#">Anti-ageing Treatment</a></li>
+                    <li><a href="#">Event Make Up</a></li>
+                    <li><a href="#">Body Treatment</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section contact">
+                <h4>Contact Information</h4>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i>
+                        <div class="address">KLLG st, No.99th, PKU City,ID 28289</div>
+                    </li>
+                    <li><i class="fa fa-phone"></i>
+                        <div class="address">+62 111-222-3344</div>
+                    </li>
+                    <li><i class="fa fa-envelope"></i>
+                        <div class="address">your@domain.com</div>
+                    </li>
+                </ul>
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="footer-bottom">
+            <p>Copyright © 2025. All Right Reserved</p>
+            <div class="footer-links">
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
