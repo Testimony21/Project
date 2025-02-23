@@ -22,3 +22,16 @@ document.addEventListener("DOMContentLoaded", function(){
     }, {threshold: 0.5});
     progressBars.forEach(bar => observer.observe(bar));
 })
+
+document.addEventListener("DOMContentLoaded", function(){
+    const h1Elements = document.querySelectorAll("h1");
+
+    const observer = new IntersectionObserver(entries =>{
+        entries.forEach(entry =>{
+            if (entry.isIntersecting){
+                entry.target.classList.add("animate");
+            }
+        });
+    }, {threshold: 1});
+    h1Elements.forEach(h1 => observer.observe(h1));
+});
