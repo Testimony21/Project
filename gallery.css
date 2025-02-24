@@ -10,6 +10,8 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+/* Navigation bar */
+
 .container1 {
     position: fixed;
     top: 0;
@@ -47,17 +49,8 @@ nav {
     left: 0;
 }
 
-.nav-link{
-    justify-content: space-between;
-    display: flex;
-    text-decoration: none;
-    font-size: large;
-    color: gray;
-}
-
-
 .hero {
-    background-image: url('./images/beauty9.jpg');
+    background-image: url('./images/beauty1.jpg');
     background-repeat: no-repeat;
     background-position: center;
     justify-content: center;
@@ -99,31 +92,92 @@ nav {
     margin-bottom: 50px;
 }
 
-/* Booking form container */
-.container6{
-    margin-top: 85px;
+.nav-link{
+    justify-content: space-between;
+    display: flex;
+    text-decoration: none;
+    font-size: large;
+    color: gray;
+}
+
+h1{
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+    
+.animate{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.gallery{
     display: flex;
     flex-wrap: wrap;
-    /* width: 1200px; */
-    padding: 20px;
-    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px;
     margin-left: 50px;
     margin-right: 50px;
 }
 
-form{
+.image{
+    overflow: hidden;
+    position: relative;
+    width: 30%;
+    aspect-ratio: 1;
+    /* height: auto; */
+    border-radius: 10px;
+}
+
+.image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* display: block; */
+    transition: transform 0.3s ease-in-out;
+}
+
+.image::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image:hover::after{
+    opacity: 1;
+}
+
+.image:hover img{
+    transform: scale(1.1);
+}
+
+/* Booking form container */
+
+.container6{
+    margin-top: 85px;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    background-color: rgba(255, 240, 245, 0.8); 
+    width: 1200px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .appointment-form{
-    background-color: rgba(255, 240, 245, 0.8);
     float: right;
-    width: 650px;
-    /* margin-left: 30px; */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 30px;
 }
 
 .container6 label{
@@ -132,7 +186,6 @@ form{
     overflow: hidden;
     max-width: 2000px;
     width: 500px;
-    padding-left: 20px;
 }
 
 .para h1{
@@ -145,7 +198,7 @@ form{
     overflow: hidden;
 }
 
-.para p{
+.para{
     color: gray;
     display: flex;
     flex-wrap: wrap;
@@ -154,24 +207,21 @@ form{
     justify-items: center;
     align-content: space-around;
     width: 500px;
-    margin-top: 10px;
+    margin-top: 50px;
     line-height: 150%;
-    margin-bottom: 50px;
 }
 
 .appointment-form input, .appointment-form textarea{
-    display: flex;
-    width: 80%;
+    width: 100%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid grey;
     border-radius: 15px;
     font-size: 14px;
-    justify-self: center;
+    float: right;
 }
  
 .appointment-form button{
-    display: flex;
     background-color: rgba(255, 240, 245, 0.8);;
     border-radius: 30px;
     padding: 15px;
@@ -179,7 +229,6 @@ form{
     color: rgb(172, 70, 70);
     border: 1px solid grey;
     cursor: pointer;
-    justify-self: center;
 }
 
 .appointment-form button:hover{
@@ -187,22 +236,6 @@ form{
     color: bisque;
 }
 
-.social-icons{
-    color: rgb(172, 70, 70);
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 0;
-    padding-left: 0;
-}
-
-.social-icons .fa-facebook, .fa-instagram, .fa-youtube, .fa-x-twitter{
-    padding: 10px;
-} 
-
-.follow{
-    color: gray;
-    margin-top: 15px;
-}
 
 /* footer section */
 
@@ -270,6 +303,7 @@ footer{
     float: right;
     margin-right: 50px;
     /* margin: 0 10px; */
+
     text-decoration: none;
 }
 
@@ -348,7 +382,6 @@ footer{
 
 .fa-facebook{
     color: rgb(172, 70, 70);
-    /* padding: 10px; */
     padding-left: 0;
 }
 
@@ -358,15 +391,4 @@ footer{
 
 .contact li{
     color: white;
-}
-
-h1{
-    opacity: 0;
-    transform: translateY(-50px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
-    
-.animate{
-    opacity: 1;
-    transform: translateY(0);
 }
