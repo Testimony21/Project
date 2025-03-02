@@ -1,5 +1,9 @@
-/* body section */
-
+/* =========================
+   Global & Base Styles
+   ========================= */
+   html, body {
+    overflow-x: hidden;
+}
 * {
     margin: 0;
     padding: 0;
@@ -7,12 +11,30 @@
 }
 
 body {
-    overflow-x: hidden;
     background-color: rgba(255, 240, 245, 0.8);
     font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-/* Navigation bar */
+.img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1623px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+/* -------------------------
+   Navigation bar
+   ------------------------- */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .container1 {
     position: fixed;
@@ -23,10 +45,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
 }
 
-.logo img{
+.logo img {
     height: 70px;
     width: auto;
     margin-left: 50px;
@@ -34,6 +56,7 @@ body {
 }
 
 nav {
+    border-radius: 30px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     justify-content: space-between;
     border: 1px solid white;
@@ -44,13 +67,13 @@ nav {
     box-sizing: border-box;
     flex-wrap: wrap;
     z-index: 1000;
-    padding: 10px;
-    width: 80vw;
+    padding: 15px 50px;
+    width: 80%;
     top: 0;
     left: 0;
 }
 
-.nav-link{
+.nav-link {
     justify-content: space-between;
     display: flex;
     text-decoration: none;
@@ -58,8 +81,9 @@ nav {
     color: gray;
 }
 
-/* Hero section */
-
+/* -------------------------
+   Hero section
+   ------------------------- */
 .hero {
     background-image: url('./images/beauty3.jpg');
     background-repeat: no-repeat;
@@ -96,13 +120,13 @@ nav {
     padding: 20px;
 }
 
-h1{
+h1 {
     opacity: 0;
     transform: translateY(-50px);
     transition: opacity 1s ease-out, transform 1s ease-out;
 }
-    
-.animate{
+
+.animate {
     opacity: 1;
     transform: translateY(0);
 }
@@ -117,58 +141,44 @@ h1{
 }
 
 .luxury p {
-    margin-left: 50px;
-    margin-right: 50px;
+    margin: 0 50px;
     font-size: 25px;
     margin-bottom: 20px;
     font-family: "Shippori Mincho", serif;
 }
 
-/* Row of pictures after the hero section */
-
-.row {
+/* -------------------------
+   Image Row Section
+   ------------------------- */
+.image-row {
+    gap: 10px;
+    width: 100%;
+    height: 500px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
     align-items: center;
-    align-content: center;
-    height: 550px;
-}
-
-.image-row{
-    display: flex;
     flex-direction: row;
-    margin-left: 50px;
-    /* margin-right: 50px; */
+    justify-content: space-evenly;
 }
 
-.first,
-.second,
-.third {
-    border-radius: 10px;
-    transition: filter 0.3s ease-in-out;
+.image-container {
+    max-width: 100%;
     width: 350px;
     height: 350px;
-    margin-top: 2px;
+    overflow: hidden;
+    position: relative;
     border-radius: 20px;
 }
 
-.image-container,
-.products{
-    position: relative;
-    width: 401px;
-    margin-right: 30px;
+.image-container img {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    transition: filter 0.3s ease-in-out;
 }
 
-.inviting {
-    position: relative;
-    width: 401px;
-    margin-right: 14px;
-}
-
-.overlay,
-.lux,
-.relaxing {
+.image-container div {
     display: flex;
     position: absolute;
     top: 0;
@@ -178,6 +188,7 @@ h1{
     text-align: center;
     justify-content: center;
     align-items: center;
+    max-width: 100%;
     width: 350px;
     height: 352px;
     border-radius: 20px;
@@ -187,65 +198,46 @@ h1{
     font-weight: 400;
 }
 
-.image-container:hover .overlay {
+.image-container:hover div {
     opacity: 1;
 }
 
-.image-container:hover .first {
-    filter: brightness(70%);
-
-}
-
-.products:hover .lux {
-    opacity: 1;
-}
-
-.products:hover .second {
-    filter: brightness(70%);
-}
-
-.inviting:hover .relaxing {
-    opacity: 1;
-}
-
-.inviting:hover .third {
+.image-container:hover img {
     filter: brightness(70%);
 }
 
 .button {
     padding: 20px;
-    background: bisque;
+    background-color: bisque;
     color: brown;
     text-decoration: none;
     border-radius: 30px;
-    border: 1px solid rgb(172, 70, 70);
+    border: 1px solid gray;
     margin-top: 10px;
+    font-weight: bolder;
 }
 
-i {
-    font-size: 16px;
-    color: grey;
-    display: inline-block;
-    margin-left: 5px;
-    margin-bottom: 0;
+.button:hover {
+    background-color: #8a5a42;
+    color: bisque;
 }
 
-/* Beauty salon section */
-
+/* -------------------------
+   Beauty Salon Section
+   ------------------------- */
 .salon {
     color: rgb(172, 70, 70);
     font-family: "Shippori Mincho", serif;
     font-size: xx-large;
     font-weight: 700;
     margin-bottom: 20px;
-    
 }
 
 .container3 {
-    margin-top: 85px;
+    max-width: 100%;
     border-radius: 20px;
-    margin-left: 50px;
-    margin-right: 45px;
+    /* margin: 0 50px 0 45px; */
+    margin: 0 45px 0 50px;
 }
 
 .container3 h1 {
@@ -257,21 +249,19 @@ i {
 
 .image {
     float: right;
-    height: 530px;
-    width: 40%;
-    margin-top: 20px;
+    height: 495px;
+    width: 45%;
     display: block;
     border-radius: 30px;
     padding: 1px;
-    margin-right: 5px;
-    margin-left: 20px;
+    margin: 20px 5px 0 20px;
 }
 
-.elegance{
+.elegance {
     width: 50%;
 }
 
-.container3 p{
+.container3 p {
     color: grey;
     line-height: 200%;
     padding-right: 100px;
@@ -279,46 +269,43 @@ i {
     margin-top: 18px;
 }
 
-
-ul{
+ul {
     color: grey;
     line-height: 200%;
     padding-right: 100px;
     font-size: 16px;
-    margin-top: 18px;
-    margin-left: 19px;
+    margin: 18px 0 0 19px;
 }
 
-/* Booking form container */
-
-.container6{
-    margin-top: 85px;
+/* -------------------------
+   Booking Form Section
+   ------------------------- */
+.container6 {
+    margin: 85px 0 0 52px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 240, 245, 0.8); 
+    background-color: rgba(255, 240, 245, 0.8);
     width: 1195px;
     padding: 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    margin-left: 52px;
-    /* margin-right: 40px; */
+    max-width: 100%;
 }
 
-.appointment-form{
+.appointment-form {
     float: right;
     margin-left: 30px;
 }
 
-.container6 label{
+.container6 label {
     color: rgb(172, 70, 70);
     display: flex;
     overflow: hidden;
-    max-width: 2000px;
     width: 500px;
 }
 
-.para h1{
+.para h1 {
     font-family: "Shippori Mincho", serif;
     font-weight: 200;
     font-size: 40px;
@@ -328,7 +315,7 @@ ul{
     overflow: hidden;
 }
 
-.para{
+.para {
     color: gray;
     display: flex;
     flex-wrap: wrap;
@@ -341,7 +328,8 @@ ul{
     line-height: 150%;
 }
 
-.appointment-form input, .appointment-form textarea{
+.appointment-form input,
+.appointment-form textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -350,33 +338,35 @@ ul{
     font-size: 14px;
     float: right;
 }
- 
-.appointment-form button{
-    background-color: rgba(255, 240, 245, 0.8);;
+
+.appointment-form button {
+    background-color: bisque;
     border-radius: 30px;
     padding: 15px;
     font-weight: bolder;
     color: rgb(172, 70, 70);
     border: 1px solid grey;
     cursor: pointer;
+    width: 30%;
 }
 
-.appointment-form button:hover{
+.appointment-form button:hover {
     background-color: #8a5a42;
     color: bisque;
 }
 
-/* reviews */
-
-.reviews-container{
+/* -------------------------
+   Reviews Section
+   ------------------------- */
+.reviews-container {
+    max-width: 100%;
     width: 640px;
-    /* width: auto; */
     overflow: hidden;
     position: relative;
     margin-left: 50px;
 }
 
-.reviews{
+.reviews {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -386,93 +376,57 @@ ul{
     overflow: hidden;
     animation: slide 10s linear infinite;
     gap: 20px;
-    width:max-content;
+    width: max-content;
     transition: transform 1s ease-in-out;
 }
 
-.feedback{
+.feedback {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     height: 400px;
     width: 300px;
     overflow: hidden;
     padding: 20px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin: 100px 0;
     border-radius: 30px;
     background: white;
     line-height: 30px;
-    /* margin-left: 10px; */
 }
 
-.emily{
-    display: flex;
-    /* justify-content: center;
-    align-items:center; */
-    color: rgb(172, 70, 70);
-    float: left;
-    margin-top: 100px; 
-}
-
-.faith{
+.emily {
     display: flex;
     color: rgb(172, 70, 70);
     float: left;
-    margin-top: 160px; 
+    margin-top: 100px;
 }
 
-.laura{
+.faith {
     display: flex;
     color: rgb(172, 70, 70);
     float: left;
-    margin-top: 70px; 
+    margin-top: 160px;
 }
 
-/* .client1{
-    color: gray;
-    margin-top: 130px;
+.laura {
+    display: flex;
+    color: rgb(172, 70, 70);
     float: left;
-    font-family: "Shippori Mincho", serif;
-    font-weight:500;
-    font-size:large;
-    overflow: hidden;
+    margin-top: 70px;
 }
 
-.client2{
-    color: gray;
-    margin-top: 130px;
-    float: left;
-    font-family: "Shippori Mincho", serif;
-    font-weight:500;
-    font-size:large;
-    overflow: hidden;
-}
-
-.client3{
-    color: gray;
-    margin-top: 190px;
-    float: left;
-    font-family: "Shippori Mincho", serif;
-    font-weight:500;
-    font-size:large;
-    overflow: hidden;
-} */
-
-.container7{
+.container7 {
     display: flex;
     flex-wrap: wrap;
 }
 
-.testimonial{
+.testimonial {
     float: right;
     flex-direction: column;
-    margin-top: 100px;
-    margin-right: 40px;
+    margin: 100px 0 0 40px;
     width: 40%;
-    /* margin-left: 48px; */
 }
 
-.testimonial p{
-    margin-left: 10px;
+.testimonial p {
+    margin: 0 0 0 10px;
     color: grey;
     line-height: 200%;
     padding-right: 100px;
@@ -480,7 +434,7 @@ ul{
     margin-top: 18px;
 }
 
-.testimonial-container{
+.testimonial-container {
     color: rgb(172, 70, 70);
     font-family: "Shippori Mincho", serif;
     font-size: xx-large;
@@ -488,49 +442,31 @@ ul{
     margin-bottom: 20px;
 }
 
-.testimonial h1{
+.testimonial h1 {
     font-family: "Shippori Mincho", serif;
     font-weight: 200;
     font-size: 50px;
 }
 
 @keyframes slide {
-    0% { transform: translateX(0); }
-    33% { transform: translateX(-320px); }
-    66% { transform: translateX(-640px); }
-    100% { transform: translateX(0); }
+    0% {
+        transform: translateX(0);
+    }
+    33% {
+        transform: translateX(-320px);
+    }
+    66% {
+        transform: translateX(-640px);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
-/* achievement counter block */
-.container8{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    background-color: peachpuff;
-    justify-content: space-between;
-    color: rgb(172, 70, 70);
-    height: 150px;
-    overflow: hidden;
-    /* margin-top: 500px; */
-}
-
-/* .counter{
-    font-family: "Shippori Mincho", serif;
-    font-weight: 900;
-    font-size: 50px;
-    padding-top: 30px;
-}
-
-.below{
-    font-family: "Shippori Mincho", serif;
-    font-weight: 100;
-    font-size: 25px;
-    padding-bottom: 30px;
-} */
-
-/* unlock secrets  */
-
-.unlock-secrets{
+/* -------------------------
+   Unlock Secrets Section
+   ------------------------- */
+.unlock-secrets {
     position: relative;
     align-items: center;
     justify-content: center;
@@ -558,7 +494,7 @@ ul{
     z-index: 1;
 }
 
-.white-background{
+.white-background {
     position: relative;
     background-color: white;
     justify-content: center;
@@ -568,9 +504,14 @@ ul{
     width: 700px;
     height: 350px;
     z-index: 2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.white-background h1{
+.white-background h1 {
     display: flex;
     font-family: "Shippori Mincho", serif;
     font-weight: 200;
@@ -580,7 +521,7 @@ ul{
     text-align: center;
 }
 
-.white-background p{
+.white-background p {
     display: flex;
     padding: 20px;
     text-align: center;
@@ -589,7 +530,7 @@ ul{
     font-size: 17px;
 }
 
-.discover-button{
+.discover-button {
     background-color: bisque;
     border-radius: 30px;
     padding: 15px;
@@ -597,39 +538,38 @@ ul{
     color: rgb(172, 70, 70);
     border: 1px solid grey;
     cursor: pointer;
+    margin-top: 10px;
 }
 
-.discover-button:hover{
+.discover-button:hover {
     background-color: #8a5a42;
     color: bisque;
 }
 
-/* skills and ability section */
-
-.skills{
-    margin-left: 50px;
-    margin-right: 50px;
+/* -------------------------
+   Skills and Ability Section
+   ------------------------- */
+.skills {
+    margin: 100px 50px 85px 50px;
     flex-direction: column;
     float: left;
-    margin-top: 100px;
-    margin-bottom: 85px;
 }
 
-.ability{
+.ability {
     float: right;
-    width: 42%;
+    width: 45%;
     border-radius: 30px;
-    height: 530px;
+    height: 513px;
 }
 
-.percentage{
+.percentage {
     min-width: 40px;
     text-align: right;
     font-weight: bold;
     font-size: 14px;
 }
 
-.skills span{
+.skills span {
     margin-top: 50px;
     color: rgb(172, 70, 70);
     font-family: "Shippori Mincho", serif;
@@ -638,39 +578,28 @@ ul{
     margin-bottom: 20px;
 }
 
-.skills h1{
+.skills h1 {
     font-family: "Shippori Mincho", serif;
     font-weight: 200;
     font-size: 50px;
 }
 
-.section p{
+.section p {
     color: grey;
     line-height: 150%;
     margin-top: 18px;
 }
 
-.skill{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 5px;
-    text-align: left;
-    max-width: 600px;
-    line-height: 2px;
+.section2 {
+    float: left;
+    width: 42%;
 }
 
-.skill p{
-    margin: 0;
-    flex: 1;
-    text-align: left;
-    font-size: 18px;
-    font-family: "Shippori Mincho", serif;
-    line-height: 1px;
-    color: rgb(172, 70, 70);
+.section {
+    width: 42%;
 }
 
-.progress{
+.progress {
     width: 100%;
     height: 10px;
     background-color: #e0e0e0;
@@ -679,7 +608,7 @@ ul{
     margin-top: 2px;
 }
 
-.progress-bar{
+.progress-bar {
     height: 100%;
     width: 0%;
     background-color: #c47b7b;
@@ -687,123 +616,169 @@ ul{
     transition: width 2s ease-in-out;
 }
 
-.section2{
-    float: left;
-    width: 42%;
+.skill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    max-width: 600px;
+    line-height: 2px;
 }
 
-.section{
-    width: 42%;
+.skill p {
+    margin: 0;
+    flex: 1;
+    text-align: left;
+    font-size: 100%;
+    font-family: "Shippori Mincho", serif;
+    line-height: 1%;
+    color: rgb(172, 70, 70);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* footer */
-
-footer{
+/* -------------------------
+   Footer Section
+   ------------------------- */
+footer {
     clear: both;
     background-color: #e5b1a1;
 }
 
-.clearfix::after{
+.clearfix::after {
     content: "";
     display: block;
     clear: both;
 }
 
-.footer-container{
+.footer-container {
     display: flex;
     justify-content: space-between;
     line-height: 50px;
-    max-width: 1200px;
+    width: 1200px;
     margin: auto;
     flex-wrap: wrap;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin: 0 50px;
 }
 
-.footer-section h2{
+.footer-section h2 {
     font-size: 30px;
     margin-bottom: 15px;
     font-family: "Shippori Mincho", serif;
 }
 
-.footer-section ul{
+.footer-section ul {
     list-style: none;
     padding: 0;
     line-height: 40px;
+    margin: 0;
 }
 
-.footer-section ul li a{
+.footer-section ul li a {
     color: white;
     text-decoration: none;
 }
 
-.footer-section ul li a:hover{
+.footer-section ul li a:hover {
     color: #8a5a42;
 }
 
-.social-icons i{
+.social-icons i {
     font-size: 20px;
     margin-right: 10px;
     cursor: pointer;
 }
 
-.footer-bottom{
+.footer-bottom {
     margin-top: 10px;
     display: flex;
     justify-content: space-between;
+    background-color: #d09989;
+    align-items: center;
+    padding: 10px 20px;
 }
 
-.footer-bottom p{
-    margin-left: 50px;
-    /* float: left; */
+.footer-bottom p {
+    margin-left: 30px;
     color: white;
 }
 
-.footer-links a{
+.footer-links a {
     color: white;
     float: right;
     margin-right: 50px;
     text-decoration: none;
 }
 
-.social-icons .fa-instagram, .fa-youtube, .fa-x-twitter{
+.social-icons .fa-instagram,
+.fa-youtube,
+.fa-x-twitter {
     color: rgb(172, 70, 70);
     padding: 10px;
-} 
+}
 
-.fa-facebook{
+.fa-facebook {
     color: rgb(172, 70, 70);
-    /* padding: 10px; */
     padding-left: 0;
 }
 
-.fa-location-dot, .fa-phone, .fa-envelope{
+.fa-location-dot,
+.fa-phone,
+.fa-envelope {
     color: rgb(172, 70, 70);
-} 
+}
 
-.contact li{
+.contact li {
     color: white;
 }
 
+/* =========================
+   Mobile Responsiveness Overrides (Shorthand Margins & Image Fix)
+   ========================= */
+@media screen and (max-width: 767px) {
+    /* Ensure containers do not exceed viewport width */
+    .container, .container1, nav, .container6, .footer-container { max-width: 100vw; }
+    
+    /* Body */
+    body { display: block; }
+    
+    /* Navigation adjustments */
+    .container1 { position: relative; padding: 10px 0; }
+    .logo img { margin: 0 0 0 10px; }
+    nav { width: 95%; padding: 10px 15px; margin: 10px auto; }
+    .nav-link { font-size: medium; margin: 0 5px; }
+    
+    /* Hero Section adjustments */
+    .hero { padding: 50px 20px; height: auto; }
+    .luxury h1 { padding: 10px; margin: 0 10px 20px; font-size: 30px; }
+    .luxury p { margin: 0 10px 20px; font-size: 20px; }
+    
+    /* Image Row adjustments with Image Fix */
+    .image-row { flex-direction: column; height: auto; }
+    .image-container { width: 90%; height: auto; margin: 10px auto; position: relative; }
+    .image-container img { position: static; width: 100%; height: auto; }
+    
+    /* Beauty Salon Section adjustments */
+    .container3 { margin: 0 10px; flex-direction: column; align-items: center; }
+    .image, .elegance { width: 100%; float: none; margin: 10px 0; }
+    .container3 p, ul { padding-right: 0; text-align: center; }
+    
+    /* Booking Form Section adjustments */
+    .container6 { width: 95%; margin: 85px auto 0; padding: 20px 10px; }
+    .appointment-form, .para { width: 100%; float: none; margin: 10px 0; }
+    .container6 label { width: 100%; }
+    
+    /* Reviews Section adjustments */
+    .reviews-container { width: 95%; margin: 0 auto; }
+    .reviews { margin: 0 auto; flex-wrap: wrap; justify-content: center; }
+    .testimonial { width: 100%; float: none; margin: 20px auto; text-align: center; }
+    
+    /* Unlock Secrets Section adjustments */
+    .white-background { width: 90%; height: auto; padding: 20px; }
+    
+    /* Skills Section adjustments */
+    .skills { margin: 50px 10px 85px; flex-direction: column; align-items: center; }
+    .ability, .section, .section2 { width: 100%; float: none; margin: 10px 0; }
+    
+    /* Footer adjustments */
+    .footer-container { width: 95%; margin: 0 auto; padding: 10px; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+}
