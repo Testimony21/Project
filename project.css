@@ -1,9 +1,11 @@
 /* =========================
    Global & Base Styles
    ========================= */
-   html, body {
+html,
+body {
     overflow-x: hidden;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -51,8 +53,8 @@ body {
 .logo img {
     height: 70px;
     width: auto;
-    margin-left: 50px;
-    padding-top: 3px;
+    margin-left: 57px;
+    padding-top: 10px;
 }
 
 nav {
@@ -61,7 +63,7 @@ nav {
     justify-content: space-between;
     border: 1px solid white;
     background-color: white;
-    margin-right: 50px;
+    margin-right: 55px;
     display: flex;
     align-content: center;
     box-sizing: border-box;
@@ -236,8 +238,8 @@ h1 {
 .container3 {
     max-width: 100%;
     border-radius: 20px;
-    /* margin: 0 50px 0 45px; */
-    margin: 0 45px 0 50px;
+    margin: 0 50px 0 57px;
+    /* margin: 0 45px 0 50px; */
 }
 
 .container3 h1 {
@@ -249,52 +251,49 @@ h1 {
 
 .image {
     float: right;
-    height: 495px;
-    width: 45%;
+    height: 452px;
+    width: 40%;
     display: block;
     border-radius: 30px;
     padding: 1px;
-    margin: 20px 5px 0 20px;
-}
-
-.elegance {
-    width: 50%;
+    margin: 10px 5px 0 20px;
 }
 
 .container3 p {
     color: grey;
-    line-height: 200%;
-    padding-right: 100px;
+    line-height: 150%;
+    padding-right: 50%;
     font-size: 16px;
     margin-top: 18px;
 }
 
 ul {
     color: grey;
-    line-height: 200%;
+    line-height: 150%;
     padding-right: 100px;
     font-size: 16px;
-    margin: 18px 0 0 19px;
+    margin: 17px 0 0 19px;
 }
 
 /* -------------------------
    Booking Form Section
    ------------------------- */
 .container6 {
-    margin: 85px 0 0 52px;
+    margin: 85px 0 0 57px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     background-color: rgba(255, 240, 245, 0.8);
-    width: 1195px;
+    /* width: 1195px; */
+    width: 1185px;
     padding: 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     max-width: 100%;
 }
 
 .appointment-form {
-    float: right;
+    /* float: right; */
     margin-left: 30px;
 }
 
@@ -358,12 +357,214 @@ ul {
 /* -------------------------
    Reviews Section
    ------------------------- */
+.container7 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    float: left;
+    flex-direction: column;
+    margin: 100px 0 0 58px;
+    width: 45%;
+}
+
+.testimonial p {
+    color: grey;
+    line-height: 150%;
+    padding-right: 100px;
+    font-size: 16px;
+    margin-top: 18px;
+}
+
+.testimonial-container {
+    color: rgb(172, 70, 70);
+    font-family: "Shippori Mincho", serif;
+    font-size: xx-large;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.testimonial h1 {
+    font-family: "Shippori Mincho", serif;
+    font-weight: 200;
+    font-size: 50px;
+}
+
 .reviews-container {
+    max-width: 300px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 53px 0 0 180px;
+}
+
+.reviews {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 20px;
+}
+
+.feedback {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    height: 400px;
+    width: 300px;
+    overflow: hidden;
+    padding: 20px;
+    margin: 50px 0;
+    border-radius: 30px;
+    background: white;
+    line-height: 30px;
+}
+
+.arrow {
+    cursor: pointer;
+    font-size: 50px;
+    /* color: bisque; */
+    color: brown;
+    transition: color 0.3s ease-in-out;
+    z-index: 10;
+    display: flex;
+    gap: 20px;
+    position: relative;
+    left: 40px;
+    top: 40%;
+}
+
+.arrow:hover {
+    /* color: #8a5a42; */
+    color: bisque;
+}
+
+.laura,
+.emily,
+.faith {
+    color: rgb(172, 70, 70);
+    margin-top: 20px;
+}
+
+.laura {
+    margin-top: 70px;
+}
+
+.emily {
+    margin-top: 100px;
+}
+
+.faith {
+    margin-top: 160px;
+}
+
+
+
+/* .reviews-container {
+    max-width: 100%;
+    width: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+.reviews {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    width: max-content;
+    transition: transform 0.5s ease-in-out;
+}
+
+.feedback {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    height: 400px;
+    width: 300px;
+    overflow: hidden;
+    padding: 20px;
+    margin: 100px 0;
+    border-radius: 30px;
+    background: white;
+    line-height: 30px;
+    position: relative;
+}
+
+.emily, .faith, .laura {
+    display: flex;
+    color: rgb(172, 70, 70);
+    float: left;
+    margin-top: 20px;
+}
+
+.laura {
+    margin-top: 70px;
+}
+
+.emily {
+    margin-top: 100px;
+}
+
+.faith {
+    margin-top: 160px;
+}
+
+.container7 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    float: left;
+    flex-direction: column;
+    margin: 100px 0 0 58px;
+    width: 45%;
+}
+
+.testimonial p {
+    color: grey;
+    line-height: 200%;
+    padding-right: 100px;
+    font-size: 16px;
+    margin-top: 18px;
+}
+
+.testimonial-container {
+    color: rgb(172, 70, 70);
+    font-family: "Shippori Mincho", serif;
+    font-size: xx-large;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.testimonial h1 {
+    font-family: "Shippori Mincho", serif;
+    font-weight: 200;
+    font-size: 50px;
+}
+
+.arrow {
+    cursor: pointer;
+    margin-top: 25%;
+    font-size: 50px;
+    color: burlywood;
+    transition: color 0.3s ease-in-out;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+.arrow:hover {
+    color: brown;
+} */
+
+
+
+
+/* .reviews-container {
     max-width: 100%;
     width: 640px;
     overflow: hidden;
     position: relative;
-    margin-left: 50px;
+    margin-left: 2px;
 }
 
 .reviews {
@@ -376,6 +577,7 @@ ul {
     overflow: hidden;
     animation: slide 10s linear infinite;
     gap: 20px;
+    gap: 70px;
     width: max-content;
     transition: transform 1s ease-in-out;
 }
@@ -448,7 +650,13 @@ ul {
     font-size: 50px;
 }
 
-@keyframes slide {
+.arrow{
+    margin-top: 25%;
+    font-size: 50px;
+    color: brown;
+} */
+
+/* @keyframes slide {
     0% {
         transform: translateX(0);
     }
@@ -461,7 +669,7 @@ ul {
     100% {
         transform: translateX(0);
     }
-}
+} */
 
 /* -------------------------
    Unlock Secrets Section
@@ -734,51 +942,169 @@ footer {
    Mobile Responsiveness Overrides (Shorthand Margins & Image Fix)
    ========================= */
 @media screen and (max-width: 767px) {
+
     /* Ensure containers do not exceed viewport width */
-    .container, .container1, nav, .container6, .footer-container { max-width: 100vw; }
-    
+    .container,
+    .container1,
+    nav,
+    .container6,
+    .footer-container {
+        max-width: 100vw;
+    }
+
     /* Body */
-    body { display: block; }
-    
+    body {
+        display: block;
+    }
+
     /* Navigation adjustments */
-    .container1 { position: relative; padding: 10px 0; }
-    .logo img { margin: 0 0 0 10px; }
-    nav { width: 95%; padding: 10px 15px; margin: 10px auto; }
-    .nav-link { font-size: medium; margin: 0 5px; }
-    
+    .container1 {
+        position: relative;
+        padding: 10px 0;
+    }
+
+    .logo img {
+        margin: 0 0 0 10px;
+    }
+
+    nav {
+        width: 95%;
+        padding: 10px 15px;
+        margin: 10px auto;
+    }
+
+    .nav-link {
+        font-size: medium;
+        margin: 0 5px;
+    }
+
     /* Hero Section adjustments */
-    .hero { padding: 50px 20px; height: auto; }
-    .luxury h1 { padding: 10px; margin: 0 10px 20px; font-size: 30px; }
-    .luxury p { margin: 0 10px 20px; font-size: 20px; }
-    
+    .hero {
+        padding: 50px 20px;
+        height: auto;
+    }
+
+    .luxury h1 {
+        padding: 10px;
+        margin: 0 10px 20px;
+        font-size: 30px;
+    }
+
+    .luxury p {
+        margin: 0 10px 20px;
+        font-size: 20px;
+    }
+
     /* Image Row adjustments with Image Fix */
-    .image-row { flex-direction: column; height: auto; }
-    .image-container { width: 90%; height: auto; margin: 10px auto; position: relative; }
-    .image-container img { position: static; width: 100%; height: auto; }
-    
+    .image-row {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .image-container {
+        width: 90%;
+        height: auto;
+        margin: 10px auto;
+        position: relative;
+    }
+
+    .image-container img {
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+
     /* Beauty Salon Section adjustments */
-    .container3 { margin: 0 10px; flex-direction: column; align-items: center; }
-    .image, .elegance { width: 100%; float: none; margin: 10px 0; }
-    .container3 p, ul { padding-right: 0; text-align: center; }
-    
+    .container3 {
+        margin: 0 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image {
+        width: 100%;
+        float: none;
+        margin: 10px 0;
+    }
+
+    .container3 p,
+    ul {
+        padding-right: 0;
+    }
+
     /* Booking Form Section adjustments */
-    .container6 { width: 95%; margin: 85px auto 0; padding: 20px 10px; }
-    .appointment-form, .para { width: 100%; float: none; margin: 10px 0; }
-    .container6 label { width: 100%; }
-    
+    .container6 {
+        width: 95%;
+        margin: 85px auto 0;
+        padding: 20px 10px;
+    }
+
+    .appointment-form,
+    .para {
+        width: 100%;
+        float: none;
+        margin: 10px 0;
+    }
+
+    .container6 label {
+        width: 100%;
+        padding: 20px;
+    }
+
     /* Reviews Section adjustments */
-    .reviews-container { width: 95%; margin: 0 auto; }
-    .reviews { margin: 0 auto; flex-wrap: wrap; justify-content: center; }
-    .testimonial { width: 100%; float: none; margin: 20px auto; text-align: center; }
-    
+    .reviews-container {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .reviews {
+        margin: 0 auto;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .testimonial {
+        width: 40%;
+        float: left;
+        margin: 20px auto;
+    }
+
+    .testimonial p {
+        margin-top: 0;
+    }
+
+
     /* Unlock Secrets Section adjustments */
-    .white-background { width: 90%; height: auto; padding: 20px; }
-    
+    .white-background {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
     /* Skills Section adjustments */
-    .skills { margin: 50px 10px 85px; flex-direction: column; align-items: center; }
-    .ability, .section, .section2 { width: 100%; float: none; margin: 10px 0; }
-    
+    .skills {
+        margin: 50px 10px 85px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ability,
+    .section,
+    .section2 {
+        width: 100%;
+        float: none;
+        margin: 10px 0;
+    }
+
     /* Footer adjustments */
-    .footer-container { width: 95%; margin: 0 auto; padding: 10px; }
-    .footer-bottom { flex-direction: column; text-align: center; }
+    .footer-container {
+        width: 95%;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
 }

@@ -648,6 +648,11 @@ footer {
     .image-row { flex-direction: column; height: auto; }
     .image-container { width: 90%; height: auto; margin: 10px auto; position: relative; }
     .image-container img { position: static; width: 100%; height: auto; }
+
+    /* Booking Form Section adjustments */
+    .container6 { width: 95%; margin: 85px auto 0; padding: 20px 10px; }
+    .appointment-form, .para { width: 100%; float: none; margin: 10px 0; }
+    .container6 label { width: 100%; }
     
     /* Beauty Salon Section adjustments */
     .container3 { margin: 0 10px; flex-direction: column; align-items: center; }
