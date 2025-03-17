@@ -37,6 +37,11 @@
     </div>
 
     <div class="hero">
+        <div class="preload-images">
+            <img src="images/beauty31.jpg" alt="Preload">
+            <img src="images/beauty30.jpg" alt="Preload">
+            <img src="images/beauty24.jpg" alt="Preload">
+        </div>
         <div class="add">
             <div class="luxury">
                 <h1>About Us</h1>
@@ -46,43 +51,97 @@
     </div>
 
     <div class="image-row">
-        <div class="image-container">
+        <a href="services.html" class="image-container">
             <img src="./images/beauty3.jpg" alt="Personalized Beauty Treatments">
             <div>Personalized Beauty Treatments</div>
-        </div>
+        </a>
 
-        <div class="image-container">
-            <img src="./images/beauty5.jpg" alt="">
+        <a href="services.html" class="image-container">
+            <img src="./images/beauty5.jpg" alt="Relaxing & Inviting Atmosphere">
             <div>Relaxing & Inviting Atmosphere</div>
-        </div>
+        </a>
 
-        <div class="image-container">
-            <img src="./images/beauty4.jpg" alt="">
+        <a href="services.html" class="image-container">
+            <img src="./images/beauty4.jpg" alt="Luxury Products & Services">
             <div>Luxury Products & Services</div>
-        </div>
+        </a>
     </div>
+    <!-- Beauty Salon section -->
 
     <div class="flex-container container3">
         <img src="./images/beauty22.jpg" alt="" class="image">
-        <div class="elegance">
-            <div class="salon">Beauty Salon</div>
-            <h1>Where Elegance Meets Excellence</h1>
-            <p>Welcome to Beauty Hub, where elegance and excellence are at the heart of everything we do. Our talented
-                professionals are committed to delivering top-notch beauty services in a serene and sophisticated
-                setting.
-                We strive to exceed your expectations and ensure every visit is a transformative experience.</p>
+        <span class="salon">Beauty Salon</span>
+        <h1>Where Elegance Meets Excellence</h1>
+        <p>Welcome to Beauty Hub, where elegance and excellence are at the heart of everything we do. Our
+            talented
+            professionals are committed to delivering top-notch beauty services in a serene and sophisticated
+            setting.
+            We strive to exceed your expectations and ensure every visit is a transformative experience.</p>
 
-            <ul>
-                <li>Expert Stylists and Technicians</li>
-                <li>Tailored Beauty Solutions</li>
-                <li>Luxurious and Inviting Environment</li>
-            </ul>
-        </div>
-        <input type="button" href="#" class="button" value="Learn more">
+        <ul>
+            <li>Expert Stylists and Technicians</li>
+            <li>Tailored Beauty Solutions</li>
+            <li>Luxurious and Inviting Environment</li>
+        </ul>
+        <details class="aboutDetails">
+            <summary>Learn More</summary>
+            <div class="extra-content">
+                <p>We believe that self-care is not just about looking good—it's about feeling confident and
+                    empowered every day. Our salon is a sanctuary where you can relax, rejuvenate, and enjoy
+                    top-notch beauty services in a warm, inviting environment.</p>
+
+                <h3>Our Story</h3>
+                <p>Founded by a passionate team of beauty professionals, Beauty Hub began as a small neighborhood
+                    salon focused on personalized care. Over the years, we have expanded our services and expertise
+                    while staying true to our core mission: delivering an exceptional, transformative experience for
+                    each and every client.</p>
+
+                <h3>Meet Our Team</h3>
+                <p>Our expert stylists, estheticians, and technicians are the heart of Beauty Hub. Each member is
+                    handpicked for their skill, creativity, and dedication to ongoing education. Whether you’re
+                    looking for a complete makeover or a subtle refresh, our professionals are here to guide you
+                    every step of the way.</p>
+
+                <h3>Our Services</h3>
+                <ul>
+                    <li>Hair Care: From precision cuts to vibrant color transformations, our hair specialists use
+                        premium products and advanced techniques to give you the look you’ve always wanted.</li>
+                    <li>Skin Treatments: Rejuvenate and restore your skin with facials, peels, and specialty
+                        treatments designed to target your unique needs.</li>
+                    <li>Nail Services: Indulge in manicures and pedicures that pamper your hands and feet while
+                        showcasing your personal style.</li>
+                    <li>Makeup & Bridal Packages: Perfect for weddings, proms, or special events—let us help you
+                        look and feel your absolute best.</li>
+                </ul>
+                <h3>Our Promise</h3>
+                <ul>
+                    <li>Personalized Experience: We take time to understand your goals, preferences, and lifestyle
+                        before recommending any service.</li>
+                    <li>Quality & Hygiene: We use top-of-the-line products and maintain strict hygiene standards to
+                        ensure your comfort and safety.</li>
+                    <li>Continual Innovation: Our team stays updated on the latest beauty trends and techniques, so
+                        you always receive cutting-edge care.</li>
+                </ul>
+                <h3>Why Choose Beauty Hub?</h3>
+                <ul>
+                    <li>Warm, Inviting Atmosphere: Step into a relaxing space where you can unwind and leave your
+                        worries at the door.</li>
+                    <li>Professionals: Our staff undergoes regular training to keep their skills sharp and deliver
+                        consistent results.</li>
+                    <li>Community Focus: We love our local community and frequently collaborate with neighboring
+                        businesses and charities to give back.</li>
+                </ul>
+                <h3>Ready to Experience Beauty Hub?</h3>
+                <p>We invite you to book an appointment or drop by for a personal consultation. Our friendly staff
+                    will be happy to help you find the perfect service or product to match your needs. Experience
+                    the transformation that comes from looking and feeling your best—visit Beauty Hub today.</p>
+            </div>
+        </details>
     </div>
 
     <!-- Booking form container -->
-    <div class="flex-container container6">
+
+    <div class="flex-container container6" id="booking">
         <div class="para">
             <h1>Book Your Appointment Now!</h1>
             <p>Contact us today to book your exclusive beauty treatment and enjoy a pampering experience like no
@@ -121,15 +180,25 @@
 
             <button type="submit" class="appointment-button">Make appointment</button>
         </form>
+
+        <!-- Custom Alert Box -->
+        <div id="custom-alert" class="custom-alert" style="display:none;">
+            <span>Your booking has been successfully submitted!</span>
+            <button class="close-btn">&times;</button>
+        </div>
     </div>
+
+    <!-- Skills and ability block added -->
 
     <div class="skills">
         <img src="./images/beauty11.jpg" alt="" class="ability">
         <div class="section">
             <span class="testimonial-container">Skills and Ability</span>
             <h1>Our Commitment to Beauty Mastery</h1>
-            <p>Learn about the rigorous training and continuous learning that our team undergoes. We are dedicated to
-                staying at the forefront of beauty trends and techniques to provide you with unparalleled service and
+            <p>Learn about the rigorous training and continuous learning that our team undergoes. We are dedicated
+                to
+                staying at the forefront of beauty trends and techniques to provide you with unparalleled service
+                and
                 results.</p>
         </div>
         <div class="section2">
@@ -159,11 +228,13 @@
         </div>
     </div>
 
+
     <div class="unlock-secrets">
         <div class="white-background">
             <h1>Unlock the Secrets to Your Most Radiant Self</h1>
             <p>Explore our exceptional range of beauty services and see how we can elevate your style and wellness</p>
-            <button type="submit" class="discover-button">Discover more</button>
+            <a href="services.html"><button type="submit" class="discover-button">Discover More</button></a>
+
         </div>
     </div>
 
@@ -181,27 +252,28 @@
             <div class="footer-section services">
                 <h2>Services</h2>
                 <ul>
-                    <li><a href="#">Nail Art and Polish</a></li>
-                    <li><a href="#">Haircut and Treatment</a></li>
-                    <li><a href="#">Hair Coloring</a></li>
-                    <li><a href="#">Anti-ageing Treatment</a></li>
-                    <li><a href="#">Event Make Up</a></li>
-                    <li><a href="#">Body Treatment</a></li>
+                    <li><a href="services.html">Nail Art and Polish</a></li>
+                    <li><a href="services.html">Haircut and Treatment</a></li>
+                    <li><a href="services.html">Hair Coloring</a></li>
+                    <li><a href="services.html">Anti-ageing Treatment</a></li>
+                    <li><a href="services.html">Event Make Up</a></li>
+                    <li><a href="services.html">Body Treatment</a></li>
                 </ul>
             </div>
 
             <div class="footer-section contact">
                 <h2>Contact Information</h2>
                 <ul>
-                    <li><i class="fa-solid fa-location-dot"></i>
-                        <div class="address">KLLG st, No.99th, PKU City,ID 28289</div>
-                    </li>
-                    <li><i class="fa fa-phone"></i>
-                        <div class="address">+62 111-222-3344</div>
-                    </li>
-                    <li><i class="fa fa-envelope"></i>
-                        <div class="address">your@domain.com</div>
-                    </li>
+                    <div>
+                        <li><i class="fa-solid fa-location-dot"></i>
+                            <div class="address">KLLG st, No.99th, PKU City,ID 28289</div>
+                        </li>
+                        <li><i class="fa fa-phone"></i>
+                            <div class="address">+62 111-222-3344</div>
+                        </li>
+                        <li><i class="fa fa-envelope"></i>
+                            <div class="address">your@domain.com</div>
+                        </li>
                 </ul>
                 <h2>Follow Us</h2>
                 <div class="social-icons">
@@ -223,6 +295,9 @@
             </div>
         </div>
     </footer>
+    </div>
+
+
 
 
     <script src="project.js"></script>

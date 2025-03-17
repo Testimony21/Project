@@ -48,6 +48,12 @@
         <!-- Hero background -->
 
         <div class="hero">
+            <div class="preload-images">
+                <img src="images/beauty31.jpg" alt="Preload">
+                <img src="images/beauty30.jpg" alt="Preload">
+                <img src="images/beauty24.jpg" alt="Preload">
+            </div>
+
             <div class="add">
                 <div class="luxury">
                     <h1>Indulge in Luxurious Beauty Services at Beauty Hub</h1>
@@ -57,51 +63,104 @@
                     <input type="button" href="appointment-form" class="button" value="Book an appointment">
                 </div>
             </div>
-
         </div>
 
         <!-- Row of pictures after the hero section -->
 
         <div class="image-row">
-            <div class="image-container">
+            <a href="services.html" class="image-container">
                 <img src="./images/beauty3.jpg" alt="Personalized Beauty Treatments">
                 <div>Personalized Beauty Treatments</div>
-            </div>
+            </a>
 
-            <div class="image-container">
-                <img src="./images/beauty5.jpg" alt="">
+            <a href="services.html" class="image-container">
+                <img src="./images/beauty5.jpg" alt="Relaxing & Inviting Atmosphere">
                 <div>Relaxing & Inviting Atmosphere</div>
-            </div>
+            </a>
 
-            <div class="image-container">
-                <img src="./images/beauty4.jpg" alt="">
+            <a href="services.html" class="image-container">
+                <img src="./images/beauty4.jpg" alt="Luxury Products & Services">
                 <div>Luxury Products & Services</div>
-            </div>
+            </a>
         </div>
+
 
         <!-- Beauty Salon section -->
 
         <div class="flex-container container3">
             <img src="./images/beauty22.jpg" alt="" class="image">
-                <span class="salon">Beauty Salon</span>
-                <h1>Where Elegance Meets Excellence</h1>
-                <p>Welcome to Beauty Hub, where elegance and excellence are at the heart of everything we do. Our
-                    talented
-                    professionals are committed to delivering top-notch beauty services in a serene and sophisticated
-                    setting.
-                    We strive to exceed your expectations and ensure every visit is a transformative experience.</p>
+            <span class="salon">Beauty Salon</span>
+            <h1>Where Elegance Meets Excellence</h1>
+            <p>Welcome to Beauty Hub, where elegance and excellence are at the heart of everything we do. Our
+                talented
+                professionals are committed to delivering top-notch beauty services in a serene and sophisticated
+                setting.
+                We strive to exceed your expectations and ensure every visit is a transformative experience.</p>
 
-                <ul>
-                    <li>Expert Stylists and Technicians</li>
-                    <li>Tailored Beauty Solutions</li>
-                    <li>Luxurious and Inviting Environment</li>
-                </ul>
-            <input type="button" href="about.html" class="button" value="Learn More">
+            <ul>
+                <li>Expert Stylists and Technicians</li>
+                <li>Tailored Beauty Solutions</li>
+                <li>Luxurious and Inviting Environment</li>
+            </ul>
+            <details class="aboutDetails">
+                <summary>Learn More</summary>
+                <div class="extra-content">
+                    <p>We believe that self-care is not just about looking good—it's about feeling confident and
+                        empowered every day. Our salon is a sanctuary where you can relax, rejuvenate, and enjoy
+                        top-notch beauty services in a warm, inviting environment.</p>
+
+                    <h3>Our Story</h3>
+                    <p>Founded by a passionate team of beauty professionals, Beauty Hub began as a small neighborhood
+                        salon focused on personalized care. Over the years, we have expanded our services and expertise
+                        while staying true to our core mission: delivering an exceptional, transformative experience for
+                        each and every client.</p>
+
+                    <h3>Meet Our Team</h3>
+                    <p>Our expert stylists, estheticians, and technicians are the heart of Beauty Hub. Each member is
+                        handpicked for their skill, creativity, and dedication to ongoing education. Whether you’re
+                        looking for a complete makeover or a subtle refresh, our professionals are here to guide you
+                        every step of the way.</p>
+
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li>Hair Care: From precision cuts to vibrant color transformations, our hair specialists use
+                            premium products and advanced techniques to give you the look you’ve always wanted.</li>
+                        <li>Skin Treatments: Rejuvenate and restore your skin with facials, peels, and specialty
+                            treatments designed to target your unique needs.</li>
+                        <li>Nail Services: Indulge in manicures and pedicures that pamper your hands and feet while
+                            showcasing your personal style.</li>
+                        <li>Makeup & Bridal Packages: Perfect for weddings, proms, or special events—let us help you
+                            look and feel your absolute best.</li>
+                    </ul>
+                    <h3>Our Promise</h3>
+                    <ul>
+                        <li>Personalized Experience: We take time to understand your goals, preferences, and lifestyle
+                            before recommending any service.</li>
+                        <li>Quality & Hygiene: We use top-of-the-line products and maintain strict hygiene standards to
+                            ensure your comfort and safety.</li>
+                        <li>Continual Innovation: Our team stays updated on the latest beauty trends and techniques, so
+                            you always receive cutting-edge care.</li>
+                    </ul>
+                    <h3>Why Choose Beauty Hub?</h3>
+                    <ul>
+                        <li>Warm, Inviting Atmosphere: Step into a relaxing space where you can unwind and leave your
+                            worries at the door.</li>
+                        <li>Professionals: Our staff undergoes regular training to keep their skills sharp and deliver
+                            consistent results.</li>
+                        <li>Community Focus: We love our local community and frequently collaborate with neighboring
+                            businesses and charities to give back.</li>
+                    </ul>
+                    <h3>Ready to Experience Beauty Hub?</h3>
+                    <p>We invite you to book an appointment or drop by for a personal consultation. Our friendly staff
+                        will be happy to help you find the perfect service or product to match your needs. Experience
+                        the transformation that comes from looking and feeling your best—visit Beauty Hub today.</p>
+                </div>
+            </details>
         </div>
 
         <!-- Booking form container -->
 
-        <div class="flex-container container6">
+        <div class="flex-container container6" id="booking">
             <div class="para">
                 <h1>Book Your Appointment Now!</h1>
                 <p>Contact us today to book your exclusive beauty treatment and enjoy a pampering experience like no
@@ -140,109 +199,68 @@
 
                 <button type="submit" class="appointment-button">Make appointment</button>
             </form>
+
+            <!-- Custom Alert Box -->
+            <div id="custom-alert" class="custom-alert" style="display:none;">
+                <span>Your booking has been successfully submitted!</span>
+                <button class="close-btn">&times;</button>
+            </div>
+
         </div>
 
         <!-- reviews -->
-            <div class="container7">
-                <div class="testimonial">
-                    <span class="testimonial-container">Our Testimonial</span>
-                    <h1>What They Say About Us</h1>
-                    <p>We love hearing from our clients! Here are some of their amazing experiences. Have a story to share?
-                        Let us know!</p>
-                </div>
-        
-                <!-- Arrows for navigation -->
-
-                <div class="arrow">
-                    <div class="arrow next">
-                        <i class="fa-solid fa-circle-arrow-right"></i>
-                    </div>
-                    <div class="arrow prev">
-                        <i class="fa-solid fa-circle-arrow-left"></i>
-                    </div>
-                </div>
-                    
-
-                <div class="reviews-container">
-                    
-                    <div class="reviews">
-                        <div class="feedback">
-                            I visited Beauty hub for a spa day and it was divine. The treatments were top-notch,
-                            and the relaxing environment made it an escape from the daily grind. If you are looking to visit
-                            a spa, try beauty hub. I highly recommend anytime, anyday!
-                            <div class="laura">Laura Santya</div>
-                        </div>
-        
-                        <div class="feedback">
-                            Beauty hub exceeded all my expectations. The staff were incredibly professional
-                            and the ambience was truly exceptional. My haircut and color were flawless. I'll definitely be
-                            coming back!
-                            <div class="emily">Emily Ruth</div>
-                        </div>
-        
-                        <div class="feedback">
-                            Beauty hub is really a place to get exceptional beauty services. Their staff are
-                            all highly professional. I'm glad I found Beauty hub!
-                            <div class="faith">Faith Christian</div>
-                        </div>
-                    </div>
-                    
-                </div>
-        
-                
-        
-            </div>
-        
-        
-    
-        
-        
-        
-
-        
-
-        <!-- <div flex-container container7>
+        <div class="container7">
             <div class="testimonial">
                 <span class="testimonial-container">Our Testimonial</span>
                 <h1>What They Say About Us</h1>
-                <p>We love hearing from our clients! Here are some of their amazing experiences. Have a story to share?
-                    Let
-                    us know!</p>
+                <p>
+                    We love hearing from our clients! Here are some of their amazing experiences. Have a story to share?
+                    Let us know!
+                </p>
             </div>
+
             <div class="reviews-container">
+                <!-- New element to display the reviewer’s name above the arrows -->
+                <div class="reviewer-name">Laura Santya</div>
+
+                <div class="arrow prev">
+                    <i class="fa-solid fa-circle-arrow-left"></i>
+                </div>
+
                 <div class="reviews">
-                    <div class="feedback">I visited Beauty hub for a spa day and it was divine. The treatments were
-                        top-notch,
-                        and the relaxing environment made it an escape from the daily grind. If you are looking to visit
-                        a spa, try beauty hub. I highly recommend anytime, anyday!
-                        <div class="laura">Laura Santya</div>
-                    </div>
-                    <div class="arrow"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></div>
-                    
-
-                    <div class="feedback">Beauty hub exceeded all my expectations. The staff were incredibly
-                        professional
-                        and
-                        the ambience was truly exceptional. My haircut and color were flawless. I'll definetely be
-                        coming
-                        back!
-                        <div class="emily">Emily Ruth</div>
+                    <div class="feedback">
+                        I visited Beauty hub for a spa day and it was divine. The treatments were top‑notch, and the
+                        relaxing environment made it an escape from the daily grind. If you are looking to visit a spa,
+                        try Beauty hub. I highly recommend anytime, anyday!
+                        <!-- Wrap the name in a common class -->
+                        <div class="reviewer laura">Laura Santya</div>
                     </div>
 
-                    <div class="feedback">Beauty hub is really a place to get exceptional beauty services. Their staff
-                        are
-                        all
-                        highly professional. I'm glad I found Beauty hub!
-                        <div class="faith">Faith Christian</div>
+                    <div class="feedback">
+                        Beauty hub exceeded all my expectations. The staff were incredibly professional and the ambience
+                        was truly exceptional. My haircut and color were flawless. I'll definitely be coming back!
+                        <div class="reviewer emily">Emily Ruth</div>
+                    </div>
+
+                    <div class="feedback">
+                        Beauty hub is really a place to get exceptional beauty services. Their staff are all highly
+                        professional. I'm glad I found Beauty hub!
+                        <div class="reviewer faith">Faith Christian</div>
                     </div>
                 </div>
+
+                <div class="arrow next">
+                    <i class="fa-solid fa-circle-arrow-right"></i>
+                </div>
             </div>
-        </div> -->
+        </div>
 
 
-        <!-- achievements -->
+    </div>
 
-        <!-- <div class="flex-container container8">
+    <!-- achievements -->
+
+    <!-- <div class="flex-container container8">
             <div class="counter">3.6K+</div>
                 <br>
                 <div class="below">Happy Clients</div>
@@ -259,14 +277,14 @@
             <div class="counter">30K+</div>
                 <br>
                 <div class="below">Expert Team</div>-->
-    </div>
+    <!-- </div> -->
 
     <div class="unlock-secrets">
         <div class="white-background">
             <h1>Unlock the Secrets to Your Most Radiant Self</h1>
             <p>Explore our exceptional range of beauty services and see how we can elevate your style and wellness
             </p>
-            <button type="submit" class="discover-button">Discover More</button>
+            <a href="services.html"><button type="submit" class="discover-button">Discover More</button></a>
         </div>
     </div>
 

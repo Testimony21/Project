@@ -47,14 +47,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
 }
 
 .logo img {
-    height: 70px;
-    width: auto;
+    height: 60px;
+    width: 60px;
     margin-left: 57px;
     padding-top: 10px;
+    border-radius: 35px;
+    box-shadow: #333;
 }
 
 nav {
@@ -69,7 +70,7 @@ nav {
     box-sizing: border-box;
     flex-wrap: wrap;
     z-index: 1000;
-    padding: 15px 50px;
+    padding: 10px 50px;
     width: 80%;
     top: 0;
     left: 0;
@@ -83,11 +84,33 @@ nav {
     color: gray;
 }
 
+.nav-link:hover {
+    color: rgb(172, 70, 70);
+}
+
 /* -------------------------
    Hero section
    ------------------------- */
+@keyframes changeBackground {
+    0% {
+        background-image: url('./images/beauty31.jpg');
+    }
+
+    33% {
+        background-image: url('./images/beauty30.jpg');
+    }
+
+    66% {
+        background-image: url('./images/beauty24.jpg');
+    }
+
+    100% {
+        background-image: url('./images/beauty31.jpg');
+    }
+}
+
 .hero {
-    background-image: url('./images/beauty3.jpg');
+    background-image: url('./images/beauty31.jpg');
     background-repeat: no-repeat;
     background-position: center;
     justify-content: center;
@@ -101,6 +124,12 @@ nav {
     flex-wrap: wrap;
     display: flex;
     width: 100%;
+    transition: background-image 1s ease-in-out;
+    animation: changeBackground 15s infinite;
+}
+
+.preload-images {
+    display: none;
 }
 
 .hero::before {
@@ -110,7 +139,7 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(162, 97, 97, 0.7);
+    background: rgba(162, 97, 97, 0.5);
     z-index: 1;
 }
 
@@ -152,6 +181,36 @@ h1 {
 /* -------------------------
    Image Row Section
    ------------------------- */
+.image-container div {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(162, 97, 97, 0.7);
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    width: 350px;
+    height: 350px;
+    border-radius: 20px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 0.7s ease-in-out, opacity 0.5s ease-in-out;
+    font-size: 2em;
+    font-weight: 400;
+}
+
+.image-container:hover div {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.image-container:hover img {
+    filter: brightness(70%);
+}
+
 .image-row {
     gap: 10px;
     width: 100%;
@@ -180,36 +239,8 @@ h1 {
     transition: filter 0.3s ease-in-out;
 }
 
-.image-container div {
-    display: flex;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: rgba(162, 97, 97, 0.7);
-    color: white;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-    width: 350px;
-    height: 352px;
-    border-radius: 20px;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    font-size: 2em;
-    font-weight: 400;
-}
-
-.image-container:hover div {
-    opacity: 1;
-}
-
-.image-container:hover img {
-    filter: brightness(70%);
-}
-
 .button {
-    padding: 20px;
+    padding: 15px;
     background-color: bisque;
     color: brown;
     text-decoration: none;
@@ -227,6 +258,14 @@ h1 {
 /* -------------------------
    Beauty Salon Section
    ------------------------- */
+
+.aboutDetails {
+    position: relative;
+    padding-bottom: 50px;
+    max-width: 100%;
+    margin: 1em 0;
+}
+
 .salon {
     color: rgb(172, 70, 70);
     font-family: "Shippori Mincho", serif;
@@ -239,7 +278,6 @@ h1 {
     max-width: 100%;
     border-radius: 20px;
     margin: 0 50px 0 57px;
-    /* margin: 0 45px 0 50px; */
 }
 
 .container3 h1 {
@@ -251,7 +289,7 @@ h1 {
 
 .image {
     float: right;
-    height: 452px;
+    height: 402px;
     width: 40%;
     display: block;
     border-radius: 30px;
@@ -275,26 +313,69 @@ ul {
     margin: 17px 0 0 19px;
 }
 
+.extra-content {
+    margin-bottom: 60px;
+}
+
+details[open] summary {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: fit-content;
+    background-color: #8a5a42;
+    color: bisque;
+    padding: 0.5em;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+summary {
+    padding: 0.5em;
+    background-color: bisque;
+    color: brown;
+    text-decoration: none;
+    border-radius: 30px;
+    border: 1px solid gray;
+    margin-top: 10px;
+    font-weight: bolder;
+    width: fit-content;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+
+h3 {
+    color: rgb(172, 70, 70);
+    font-family: "Shippori Mincho", serif;
+    font-size: xx-large;
+    font-weight: 700;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+h3.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* -------------------------
    Booking Form Section
    ------------------------- */
 .container6 {
-    margin: 85px 0 0 57px;
+    margin: 50px 0 0 57px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     background-color: rgba(255, 240, 245, 0.8);
-    /* width: 1195px; */
     width: 1185px;
     padding: 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     max-width: 100%;
-}
-
-.appointment-form {
-    /* float: right; */
-    margin-left: 30px;
 }
 
 .container6 label {
@@ -349,21 +430,113 @@ ul {
     width: 30%;
 }
 
+.appointment-form {
+    margin-left: 30px;
+}
+
 .appointment-form button:hover {
     background-color: #8a5a42;
     color: bisque;
 }
 
-/* -------------------------
-   Reviews Section
-   ------------------------- */
+/* Custom Alert Message Styling */
+.custom-alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    /* background-color: #d4edda; */
+    background-color: white;
+    color: #155724;
+    /* background-color: rgba(255, 240, 245, 0.8);
+    color: #8a5a42; */
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.custom-alert .close-btn {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: inherit;
+    transition: color 0.3s;
+}
+
+.custom-alert .close-btn:hover {
+    color: red;
+}
+
+/*---------------------
+Reviews section 
+-----------------------*/
+.reviews-container {
+    max-width: 300px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 53px 10px 10px 180px;
+    padding-bottom: 20px;
+}
+
+.reviews {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 20px;
+}
+
+.arrow {
+    cursor: pointer;
+    font-size: 50px;
+    color: brown;
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: color 0.3s ease-in-out, opacity 0.3s;
+    opacity: 0;
+}
+
+.reviews-container:hover .arrow {
+    opacity: 1;
+}
+
+.arrow:hover {
+    color: bisque;
+}
+
+.arrow.left {
+    left: -30px;
+}
+
+.arrow.right {
+    right: -30px;
+}
+
+.feedback {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    height: 400px;
+    width: 300px;
+    overflow: hidden;
+    padding: 20px;
+    margin: 50px 0;
+    border-radius: 30px;
+    background: white;
+    line-height: 30px;
+}
+
 .container7 {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .testimonial {
-    float: left;
     flex-direction: column;
     margin: 100px 0 0 58px;
     width: 45%;
@@ -391,50 +564,35 @@ ul {
     font-size: 50px;
 }
 
+/* Reviews container */
 .reviews-container {
     max-width: 300px;
     overflow: hidden;
     position: relative;
     display: flex;
     align-items: center;
-    margin: 53px 0 0 180px;
+    margin: 53px 0 0 300px;
+    scroll-snap-type: x mandatory;
 }
 
 .reviews {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    gap: 20px;
+    scroll-snap-align: start;
 }
 
 .feedback {
+    box-sizing: border-box;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     height: 400px;
     width: 300px;
     overflow: hidden;
     padding: 20px;
-    margin: 50px 0;
     border-radius: 30px;
     background: white;
     line-height: 30px;
-}
-
-.arrow {
-    cursor: pointer;
-    font-size: 50px;
-    /* color: bisque; */
-    color: brown;
-    transition: color 0.3s ease-in-out;
-    z-index: 10;
-    display: flex;
-    gap: 20px;
     position: relative;
-    left: 40px;
-    top: 40%;
-}
-
-.arrow:hover {
-    /* color: #8a5a42; */
-    color: bisque;
+    scroll-snap-align: center;
 }
 
 .laura,
@@ -442,6 +600,7 @@ ul {
 .faith {
     color: rgb(172, 70, 70);
     margin-top: 20px;
+    font-weight: bold;
 }
 
 .laura {
@@ -456,220 +615,46 @@ ul {
     margin-top: 160px;
 }
 
-
-
-/* .reviews-container {
-    max-width: 100%;
-    width: 600px;
-    overflow: hidden;
-    position: relative;
-}
-
-.reviews {
-    display: flex;
-    flex-direction: row;
-    gap: 100px;
-    width: max-content;
-    transition: transform 0.5s ease-in-out;
-}
-
-.feedback {
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    height: 400px;
-    width: 300px;
-    overflow: hidden;
-    padding: 20px;
-    margin: 100px 0;
-    border-radius: 30px;
-    background: white;
-    line-height: 30px;
-    position: relative;
-}
-
-.emily, .faith, .laura {
-    display: flex;
-    color: rgb(172, 70, 70);
-    float: left;
-    margin-top: 20px;
-}
-
-.laura {
-    margin-top: 70px;
-}
-
-.emily {
-    margin-top: 100px;
-}
-
-.faith {
-    margin-top: 160px;
-}
-
-.container7 {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.testimonial {
-    float: left;
-    flex-direction: column;
-    margin: 100px 0 0 58px;
-    width: 45%;
-}
-
-.testimonial p {
-    color: grey;
-    line-height: 200%;
-    padding-right: 100px;
-    font-size: 16px;
-    margin-top: 18px;
-}
-
-.testimonial-container {
-    color: rgb(172, 70, 70);
+.reviewer-name {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
     font-family: "Shippori Mincho", serif;
-    font-size: xx-large;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-.testimonial h1 {
-    font-family: "Shippori Mincho", serif;
-    font-weight: 200;
-    font-size: 50px;
+    font-size: 18px;
+    color: rgb(172, 70, 70);
 }
 
 .arrow {
-    cursor: pointer;
-    margin-top: 25%;
-    font-size: 50px;
-    color: burlywood;
-    transition: color 0.3s ease-in-out;
     position: absolute;
-    right: 20px;
-    top: 50%;
-
-    transform: translateY(-50%);
-}
-
-.arrow:hover {
+    top: 80% !important;
+    transform: translateY(-50%) !important;
+    opacity: 1 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
     color: brown;
-} */
-
-
-
-
-/* .reviews-container {
-    max-width: 100%;
-    width: 640px;
-    overflow: hidden;
-    position: relative;
-    margin-left: 2px;
+    cursor: pointer;
 }
 
-.reviews {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    float: left;
-    margin-left: 50px;
-    overflow: hidden;
-    animation: slide 10s linear infinite;
-    gap: 20px;
-    gap: 70px;
-    width: max-content;
-    transition: transform 1s ease-in-out;
+.arrow.prev {
+    left: 10px;
 }
 
-.feedback {
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    height: 400px;
-    width: 300px;
-    overflow: hidden;
-    padding: 20px;
-    margin: 100px 0;
-    border-radius: 30px;
-    background: white;
-    line-height: 30px;
+.arrow.next {
+    right: 10px;
 }
 
-.emily {
-    display: flex;
-    color: rgb(172, 70, 70);
-    float: left;
-    margin-top: 100px;
-}
-
-.faith {
-    display: flex;
-    color: rgb(172, 70, 70);
-    float: left;
-    margin-top: 160px;
-}
-
-.laura {
-    display: flex;
-    color: rgb(172, 70, 70);
-    float: left;
-    margin-top: 70px;
-}
-
-.container7 {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.testimonial {
-    float: right;
-    flex-direction: column;
-    margin: 100px 0 0 40px;
-    width: 40%;
-}
-
-.testimonial p {
-    margin: 0 0 0 10px;
-    color: grey;
-    line-height: 200%;
-    padding-right: 100px;
-    font-size: 16px;
-    margin-top: 18px;
-}
-
-.testimonial-container {
-    color: rgb(172, 70, 70);
-    font-family: "Shippori Mincho", serif;
-    font-size: xx-large;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-.testimonial h1 {
-    font-family: "Shippori Mincho", serif;
-    font-weight: 200;
-    font-size: 50px;
-}
-
-.arrow{
-    margin-top: 25%;
-    font-size: 50px;
+.arrow i {
+    font-size: 30px;
     color: brown;
-} */
-
-/* @keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
-    33% {
-        transform: translateX(-320px);
-    }
-    66% {
-        transform: translateX(-640px);
-    }
-    100% {
-        transform: translateX(0);
-    }
-} */
+}
 
 /* -------------------------
    Unlock Secrets Section
@@ -758,7 +743,7 @@ ul {
    Skills and Ability Section
    ------------------------- */
 .skills {
-    margin: 100px 50px 85px 50px;
+    margin: 100px 55px 85px 56px;
     flex-direction: column;
     float: left;
 }
@@ -767,7 +752,7 @@ ul {
     float: right;
     width: 45%;
     border-radius: 30px;
-    height: 513px;
+    height: 450px;
 }
 
 .percentage {
@@ -777,13 +762,13 @@ ul {
     font-size: 14px;
 }
 
-.skills span {
-    margin-top: 50px;
+.section2 span {
+    margin-top: 40px;
     color: rgb(172, 70, 70);
     font-family: "Shippori Mincho", serif;
     font-size: large;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .skills h1 {
@@ -830,7 +815,7 @@ ul {
     align-items: center;
     margin-bottom: 5px;
     max-width: 600px;
-    line-height: 2px;
+    line-height: 1px;
 }
 
 .skill p {
@@ -839,7 +824,7 @@ ul {
     text-align: left;
     font-size: 100%;
     font-family: "Shippori Mincho", serif;
-    line-height: 1%;
+    line-height: 2px;
     color: rgb(172, 70, 70);
 }
 
@@ -914,6 +899,10 @@ footer {
     float: right;
     margin-right: 50px;
     text-decoration: none;
+}
+
+.footer-bottom .footer-links a:hover {
+    color: #8a5a42;
 }
 
 .social-icons .fa-instagram,
@@ -996,22 +985,27 @@ footer {
     }
 
     /* Image Row adjustments with Image Fix */
+    .image-container {
+        width: 90vw;
+        /* Use 90% of the viewport width */
+        height: 90vw;
+        /* Maintain a square shape */
+    }
+
+    .image-container div {
+        width: 100%;
+        height: 100%;
+        font-size: 1.5em;
+        /* Slightly reduce font size for mobile */
+    }
+
+    /* Option 1: Stack images vertically */
     .image-row {
         flex-direction: column;
         height: auto;
-    }
-
-    .image-container {
-        width: 90%;
-        height: auto;
-        margin: 10px auto;
-        position: relative;
-    }
-
-    .image-container img {
-        position: static;
-        width: 100%;
-        height: auto;
+        gap: 20px;
+        padding: 10px;
+        justify-content: center;
     }
 
     /* Beauty Salon Section adjustments */
@@ -1053,26 +1047,69 @@ footer {
 
     /* Reviews Section adjustments */
     .reviews-container {
-        width: 100%;
-        margin: 0 auto;
+        width: fit-content;
+        /* Adjust width for mobile screens */
+        max-width: 380px;
+        /* Keep it centered */
+        margin: 20px auto;
+        /* Center the container */
+        overflow: hidden;
     }
 
     .reviews {
-        margin: 0 auto;
-        flex-wrap: wrap;
-        justify-content: center;
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        gap: 10px;
+    }
+
+    .feedback {
+        flex: 0 0 100%;
+        width: fit-content;
+        padding: 15px;
+    }
+
+    /* Adjust arrow sizes and positions for mobile */
+    .arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 25px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .arrow.left {
+        left: 0px;
+        /* Keep inside the screen */
+    }
+
+    .arrow.right {
+        right: 0px;
     }
 
     .testimonial {
-        width: 40%;
-        float: left;
         margin: 20px auto;
+        width: 90%;
+        text-align: start;
     }
 
-    .testimonial p {
-        margin-top: 0;
+    .testimonial-container {
+        width: 90%;
+        max-width: 350px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 15px;
+        font-size: 1.4rem;
     }
 
+    .testimonial-container h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .testimonial-container::after {
+        width: 40px;
+        height: 3px;
+    }
 
     /* Unlock Secrets Section adjustments */
     .white-background {
@@ -1104,7 +1141,51 @@ footer {
     }
 
     .footer-bottom {
+        display: flex;
         flex-direction: column;
+        /* Stack items vertically */
+        align-items: center;
+        /* Center container content horizontally */
+        padding: 10px 20px;
+        background-color: #d09989;
+    }
+
+    /* If you have anchor links within the footer */
+    .footer-bottom {
+        background-color: #d09989;
+        padding: 15px 20px;
+        display: flex;
+        flex-direction: column;
+        /* Stack content vertically */
+        align-items: center;
+        /* Center items horizontally */
         text-align: center;
+        box-sizing: border-box;
+    }
+
+    /* Footer Links: each link appears as a full-width block */
+    .footer-links {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .footer-links a {
+        display: block;
+        /* Stack links vertically */
+        padding: 10px 0;
+        color: white;
+        text-decoration: none;
+    }
+
+    /* Remove the border from the last link */
+    .footer-links a:last-child {
+        padding: 0 0;
+    }
+
+    /* Footer Paragraph styling */
+    .footer-bottom p {
+        font-size: 14px;
+        color: white;
+        margin: 0;
     }
 }

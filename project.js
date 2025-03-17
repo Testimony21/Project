@@ -1,87 +1,156 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const progressBars = document.querySelectorAll(".progress-bar");
+    const bookButton = document.querySelector(".hero .button");
+    if (bookButton) {
+        bookButton.addEventListener("click", function (event) {
+            event.preventDefault();
+            console.log("Hero button clicked");
+            const bookingSection = document.getElementById("booking");
+            if (bookingSection) {
+                console.log("Booking section found, scrolling...");
+                bookingSection.scrollIntoView({ behavior: "smooth" });
+            }
+        });
+    }
 
-    const observer = new IntersectionObserver(entries => {
+    // --- Progress Bars Animation ---
+    const progressBars = document.querySelectorAll(".progress-bar");
+    const progressObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                let bar = entry.target;
-                let percent = bar.getAttribute("data-percent");
+                const bar = entry.target;
+                const percent = parseInt(bar.getAttribute("data-percent"));
                 let count = 0;
-                let interval = setInterval(() => {
+                const interval = setInterval(() => {
                     if (count >= percent) {
                         clearInterval(interval);
                     } else {
                         count++;
                         bar.style.width = count + "%";
-                        bar.parentElement.previousElementSibling.querySelector(".percentage").textContent = count + "%";
+                        const percentageDisplay = bar.parentElement.previousElementSibling.querySelector(".percentage");
+                        if (percentageDisplay) {
+                            percentageDisplay.textContent = count + "%";
+                        }
                     }
                 }, 20);
-                observer.unobserve(bar);
+                progressObserver.unobserve(bar);
             }
         });
     }, { threshold: 0.5 });
-    progressBars.forEach(bar => observer.observe(bar));
-})
+    progressBars.forEach(bar => progressObserver.observe(bar));
 
+    // --- Animate Headings on Scroll ---
+    const animateElements = (selector) => {
+        const elements = document.querySelectorAll(selector);
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("animate");
+                }
+            });
+        }, { threshold: 1 });
+        elements.forEach(el => observer.observe(el));
+    };
+    animateElements("h1");
+    animateElements("h3");
 
+    // --- Testimonial Slider ---
+    const reviewsContainer = document.querySelector(".reviews");
+    const nextArrow = document.querySelector(".arrow.next");
+    const prevArrow = document.querySelector(".arrow.prev");
+    const feedbacks = document.querySelectorAll(".feedback");
+    const reviewerNameDisplay = document.querySelector(".reviewer-name");
 
-document.addEventListener("DOMContentLoaded", function () {
-    const h1Elements = document.querySelectorAll("h1");
+    let currentIndex = 0;
+    const feedbackCount = feedbacks.length;
 
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("animate");
+    const updateSlide = function () {
+        const feedbackWidth = feedbacks[0].offsetWidth;
+        const computedStyle = window.getComputedStyle(reviewsContainer);
+        const gap = parseInt(computedStyle.gap) || 0;
+        const offset = -currentIndex * (feedbackWidth + gap);
+        reviewsContainer.style.transform = `translateX(${offset}px)`;
+
+        const currentReviewer = feedbacks[currentIndex].querySelector(".reviewer");
+        if (currentReviewer && reviewerNameDisplay) {
+            reviewerNameDisplay.textContent = currentReviewer.textContent;
+        }
+    };
+
+    if (nextArrow && prevArrow) {
+        nextArrow.addEventListener("click", function () {
+            if (currentIndex < feedbackCount - 1) {
+                currentIndex++;
+                updateSlide();
             }
         });
-    }, { threshold: 1 });
-    h1Elements.forEach(h1 => observer.observe(h1));
-});
 
-
-
-const reviews = document.querySelector('.reviews');
-const nextArrow = document.querySelector('.next');
-const prevArrow = document.querySelector('.prev');
-
-let currentIndex = 0;
-const feedbackCount = document.querySelectorAll('.feedback').length;
-
-nextArrow.addEventListener('click', () => {
-    if (currentIndex < feedbackCount - 1) {
-        currentIndex++;
-        updateSlide();
+        prevArrow.addEventListener("click", function () {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateSlide();
+            }
+        });
     }
-});
 
-prevArrow.addEventListener('click', () => {
-    if (currentIndex > 0) {
-        currentIndex--;
-        updateSlide();
+    const bookingForm = document.querySelector(".appointment-form");
+    if (bookingForm) {
+        bookingForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // Show the custom alert
+            const alertBox = document.getElementById("custom-alert");
+            if (alertBox) {
+                alertBox.style.display = "flex";
+
+                alertBox.querySelector("span").textContent = "Your booking has been successfully submitted!";
+
+                // Add click event to the close button to hide the alert
+                alertBox.querySelector(".close-btn").addEventListener("click", function () {
+                    alertBox.style.display = "none";
+                });
+            }
+
+            // Reset the form
+            bookingForm.reset();
+        });
     }
+
+    // Hero Image Section
+    const images = [
+        'images/beauty31.jpg',
+        'images/beauty30.jpg',
+        'images/beauty24.jpg'
+    ];
+
+    let index = 0;
+    const hero = document.querySelector('.hero');
+
+    hero.style.backgroundImage = `url(${images[0]})`;
+
+    const changeImage = function () {
+        index = (index + 1) % images.length;
+        hero.style.backgroundImage = `url(${images[index]})`;
+    };
+
+    setInterval(changeImage, 5000);
+
 });
 
-function updateSlide() {
-    const offset = -currentIndex * 320; // Adjust 320 based on feedback width
-    reviews.style.transform = `translateX(${offset}px)`;
-}
+const flipAllCards = function () {
+    const cards = document.querySelectorAll('.flip-card-inner');
+    requestAnimationFrame(() => {
+        cards.forEach(card => card.classList.add('flipped'));
+    });
 
+    // After 3 seconds, flip back to the original side
+    setTimeout(() => {
+        cards.forEach(card => card.classList.remove('flipped'));
+    }, 4000);
+};
 
-
-
-
-
-// const reviews = document.querySelector ('.reviews');
-// const reviewItems = document.querySelectorAll('.feedback');
-
-// let index = 0;
-
-// function slideReviews() {
-//     index++;
-//     if (index > reviewItems.length- 2) {
-//         index = 0;
-//     }
-//     reviews.style.transform = `translateX(-${index * 320}px)`;
-// }
-
-// setInterval(slideReviews, 3000);
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        flipAllCards();
+        setInterval(flipAllCards, 10000);
+    }, 1000);
+});

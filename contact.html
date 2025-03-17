@@ -37,6 +37,11 @@
     </div>
 
     <div class="hero">
+        <div class="preload-images">
+            <img src="images/beauty31.jpg" alt="Preload">
+            <img src="images/beauty30.jpg" alt="Preload">
+            <img src="images/beauty24.jpg" alt="Preload">
+        </div>
         <div class="add">
             <div class="luxury">
                 <h1>Contact Us</h1>
@@ -51,13 +56,15 @@
             <h1>Get In Touch</h1>
             <p>We value your feedback and strive to provide exceptional customer service. If you have any suggestions,
                 comments, or concerns, please don't hesitate to reach out.</p>
-                <div class="follow"><h3>Follow Us</h3></div>
-                <div class="social-icons">
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-youtube"></i>
-                    <i class="fa-brands fa-x-twitter"></i>
-                </div>
+            <div class="follow">
+                <h3>Follow Us</h3>
+            </div>
+            <div class="social-icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+            </div>
         </div>
         <div class="appointment-form">
             <form>
@@ -91,9 +98,13 @@
                 <textarea class="message" placeholder="Input Message Here"></textarea>
                 <br>
 
-                <button type="submit" class="appointment-button">Make Appointment</button>
+                <button type="submit" class="appointment-button">Make appointment</button>
         </div>
         </form>
+        <div id="custom-alert" class="custom-alert" style="display:none;">
+            <span>Your booking has been successfully submitted!</span>
+            <button class="close-btn">&times;</button>
+        </div>
     </div>
     <footer>
         <div class="footer-container">
@@ -151,7 +162,7 @@
             </div>
         </div>
     </footer>
-    
+
     <script src="project.js"></script>
 </body>
 
