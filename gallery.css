@@ -15,8 +15,6 @@ body {
 body {
     background-color: rgba(255, 240, 245, 0.8);
     font-family: Georgia, 'Times New Roman', Times, serif;
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .img {
@@ -31,12 +29,8 @@ body {
 }
 
 /* -------------------------
-      Navigation bar
-      ------------------------- */
-.container {
-    display: flex;
-    flex-wrap: wrap;
-}
+         Navigation bar
+         ------------------------- */
 
 .container1 {
     position: fixed;
@@ -47,42 +41,31 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 12px 40px;
 }
 
 .logo img {
-    height: 60px;
-    width: 60px;
-    margin-left: 57px;
-    padding-top: 10px;
-    border-radius: 35px;
-    box-shadow: #333;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
 }
 
 nav {
-    border-radius: 30px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    justify-content: space-between;
-    border: 1px solid white;
-    background-color: white;
-    margin-right: 55px;
     display: flex;
-    align-content: center;
-    box-sizing: border-box;
-    flex-wrap: wrap;
-    z-index: 1000;
-    /* padding: 15px 50px; */
-    padding: 10px 50px;
-    width: 80%;
-    top: 0;
-    left: 0;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    background-color: white;
+    padding: 15px 25px;
+    border-radius: 40px;
 }
 
 .nav-link {
-    justify-content: space-between;
-    display: flex;
     text-decoration: none;
-    font-size: large;
+    font-size: 16px;
+    font-weight: 500;
     color: gray;
+    transition: color 0.3s;
 }
 
 .nav-link:hover {
@@ -166,10 +149,9 @@ h1 {
 .luxury h1 {
     width: 100%;
     padding: 20px;
-    font-size: 50px;
-    margin-bottom: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
 }
 
 /*------------
@@ -179,9 +161,10 @@ Gallery
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 7px;
+    gap: 19px;
     justify-content: center;
-    margin: 100px 0;
+    margin: 100px auto;
+    width: 95%;
 }
 
 /* Flip Card Container */
@@ -215,7 +198,6 @@ Gallery
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    /* Hides the reverse side when not visible */
 }
 
 /* Back side is rotated 180 degrees */
@@ -226,14 +208,14 @@ Gallery
 /* -------------------------
    Booking Form Section
    ------------------------- */
-.container6 {
-    margin: 50px 0 0 57px;
+   .container6 {
+    margin: 100px auto;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     background-color: rgba(255, 240, 245, 0.8);
-    width: 1185px;
+    width: 94%;
     padding: 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     max-width: 100%;
@@ -246,11 +228,39 @@ Gallery
     width: 500px;
 }
 
+.para h1 {
+    font-family: "Shippori Mincho", serif;
+    font-weight: 200;
+    font-size: 40px;
+    margin-bottom: 20px;
+    line-height: 100%;
+    color: #333;
+    overflow: hidden;
+}
+
+.para img{
+    border-radius: 30px;
+    height: 490px;
+    width: 490px;
+    margin-top: 30px;
+}
+
+.para {
+    color: gray;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 500px;
+    line-height: 150%;
+    align-self: flex-start; /* Aligns with the form */
+    margin-top: 20px; /* Adjust margin to match form */
+}
+
 .appointment-form input,
 .appointment-form textarea {
     width: 100%;
     padding: 10px;
-    margin: 10px 0;
+    margin: 20px 0;
     border: 1px solid grey;
     border-radius: 15px;
     font-size: 14px;
@@ -268,29 +278,6 @@ Gallery
     width: 30%;
 }
 
-.para h1 {
-    font-family: "Shippori Mincho", serif;
-    font-weight: 200;
-    font-size: 40px;
-    margin-bottom: 20px;
-    line-height: 100%;
-    color: #333;
-    overflow: hidden;
-}
-
-.para {
-    color: gray;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    float: left;
-    justify-items: center;
-    align-content: space-around;
-    width: 500px;
-    margin-top: 50px;
-    line-height: 150%;
-}
-
 .appointment-form {
     margin-left: 30px;
 }
@@ -305,11 +292,11 @@ Gallery
     position: fixed;
     top: 20px;
     right: 20px;
-    /* background-color: #d4edda;*/
-    /* color: #155724;*/
+    /* background-color: #d4edda; */
     background-color: white;
     color: #155724;
-    /* border: 1px solid #c3e6cb; */
+    /* background-color: rgba(255, 240, 245, 0.8);
+    color: #8a5a42; */
     padding: 15px 20px;
     border-radius: 5px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -331,7 +318,6 @@ Gallery
 .custom-alert .close-btn:hover {
     color: red;
 }
-
 
 /* -------------------------
    Footer Section
@@ -434,76 +420,82 @@ footer {
 }
 
 @media screen and (max-width: 767px) {
-
-    /* Ensure containers do not exceed viewport width */
-    .container,
-    .container1,
-    nav,
-    .container6,
-    .footer-container {
-        max-width: 100vw;
-    }
-
-    /* Body */
+    /* General Styles */
     body {
-        display: block;
+        font-size: 14px;
     }
 
-    /* Navigation adjustments */
+    .container {
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Navigation Bar */
     .container1 {
-        position: relative;
-        padding: 10px 0;
-    }
-
-    .logo img {
-        margin: 0 0 0 10px;
+        flex-direction: row;
+        padding: 10px;
     }
 
     nav {
-        width: 95%;
-        padding: 10px 15px;
-        margin: 10px auto;
+        flex-direction: row;
+        gap: 10px;
+        padding: 10px;
+        border-radius: 10px;
     }
 
     .nav-link {
-        font-size: medium;
-        margin: 0 5px;
+        font-size: 14px;
     }
 
-    /* Hero Section adjustments */
+    /* Hero Section */
     .hero {
         padding: 50px 20px;
         height: auto;
     }
 
     .luxury h1 {
-        padding: 10px;
-        margin: 0 10px 20px;
-        font-size: 30px;
+        font-size: 32px;
     }
 
     .luxury p {
-        margin: 0 10px 20px;
-        font-size: 20px;
+        font-size: 18px;
+        margin: 0 20px;
+    }
+
+    .button {
+        padding: 10px;
+        font-size: 14px;
     }
 
     /* Booking Form Section adjustments */
     .container6 {
-        width: 95%;
-        margin: 85px auto 0;
-        padding: 20px 10px;
+        width: 100%;
+        padding: 10px;
     }
 
-    .appointment-form,
     .para {
         width: 100%;
-        float: none;
-        margin: 10px 0;
+        text-align: center;
     }
 
-    .container6 label {
+    .para img {
         width: 100%;
-        padding: 20px;
+        height: auto;
+    }
+
+    .appointment-form {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .appointment-form input,
+    .appointment-form textarea {
+        width: 100%;
+    }
+
+    .appointment-form button {
+        width: 100%;
     }
 
     /* Unlock Secrets Section adjustments */
@@ -528,59 +520,14 @@ footer {
         margin: 10px 0;
     }
 
-    /* Footer adjustments */
+     /* Footer */
     .footer-container {
-        width: 95%;
-        margin: 0 auto;
-        padding: 10px;
-    }
-
-    .footer-bottom {
-        display: flex;
         flex-direction: column;
-        /* Stack items vertically */
-        align-items: center;
-        /* Center container content horizontally */
-        padding: 10px 20px;
-        background-color: #d09989;
-    }
-
-    /* If you have anchor links within the footer */
-    .footer-bottom {
-        background-color: #d09989;
-        padding: 15px 20px;
-        display: flex;
-        flex-direction: column;
-        /* Stack content vertically */
-        align-items: center;
-        /* Center items horizontally */
         text-align: center;
-        box-sizing: border-box;
     }
 
-    /* Footer Links: each link appears as a full-width block */
-    .footer-links {
+    .footer-section {
         width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .footer-links a {
-        display: block;
-        /* Stack links vertically */
-        padding: 10px 0;
-        color: white;
-        text-decoration: none;
-    }
-
-    /* Remove the border from the last link */
-    .footer-links a:last-child {
-        padding: 0 0;
-    }
-
-    /* Footer Paragraph styling */
-    .footer-bottom p {
-        font-size: 14px;
-        color: white;
-        margin: 0;
+        margin-bottom: 20px;
     }
 }

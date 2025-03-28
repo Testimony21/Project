@@ -105,58 +105,60 @@
             </div>
         </div>
     </div>
-
     </div>
+
     <!-- Booking form container -->
-    <div class="flex-container container6">
-        <div class="para">
-            <h1>Book Your Appointment Now!</h1>
-            <p>Contact us today to book your exclusive beauty treatment and enjoy a pampering experience like no
-                other.</p>
+    <div class="flex-container container6" id="booking">
+            <div class="para">
+                <h1>Book Your Appointment Now!</h1>
+                <p>Contact us today to book your exclusive beauty treatment and enjoy a pampering experience like no
+                    other.</p>
+                <img src="./images/beauty30.jpg" alt="#">
+            </div>
+            <form class="appointment-form">
+                <label for="name"></label>
+                <br>
+                <input type="text" required placeholder="Your Name" class="name">
+                <br>
+
+                <label for="email"></label>
+                <br>
+                <input type="email" required placeholder="E-mail" class="email">
+                <br>
+
+                <label for="phone"></label>
+                <br>
+                <input type="tel" required placeholder="Phone Number" class="phone">
+                <br>
+
+                <label for="date"></label>
+                <br>
+                <input type="date" class="date" required>
+                <br>
+
+                <label for="time"></label>
+                <br>
+                <input type="time" required class="time">
+                <br>
+
+                <label for="message"></label>
+                <br>
+                <textarea class="message" placeholder="Input Message Here"></textarea>
+                <br>
+
+                <button type="submit" class="appointment-button">Make appointment</button>
+            </form>
+
+            <!-- Custom Alert Box -->
+            <div id="custom-alert" class="custom-alert" style="display:none;">
+                <span>Your booking has been successfully submitted!</span>
+                <button class="close-btn">&times;</button>
+            </div>
+
         </div>
-        <form class="appointment-form">
-            <label for="name">Your Name</label>
-            <br>
-            <input type="text" required placeholder="Your Name" class="name">
-            <br>
-
-            <label for="email">E-mail Address</label>
-            <br>
-            <input type="email" required placeholder="E-mail" class="email">
-            <br>
-
-            <label for="phone">Phone Number</label>
-            <br>
-            <input type="tel" required placeholder="Phone Number" class="phone">
-            <br>
-
-            <label for="date">Date</label>
-            <br>
-            <input type="date" class="date" required>
-            <br>
-
-            <label for="time">Time</label>
-            <br>
-            <input type="time" required class="time">
-            <br>
-
-            <label for="message">Messages</label>
-            <br>
-            <textarea class="message" placeholder="Input Message Here"></textarea>
-            <br>
-
-            <button type="submit" class="appointment-button">Make appointment</button>
-        </form>
-        <!-- Custom Alert Box -->
-        <div id="custom-alert" class="custom-alert" style="display:none;">
-            <span>Your booking has been successfully submitted!</span>
-            <button class="close-btn">&times;</button>
-        </div>
-    </div>
-    </div>
 
     <div class="skills">
-        <img src="./images/beauty11.jpg" alt="" class="ability">
+        <img src="./images/beauty32.jpg" alt="" class="ability">
         <div class="section">
             <span class="testimonial-container">Skills and Ability</span>
             <h1>Our Commitment to Beauty Mastery</h1>

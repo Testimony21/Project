@@ -15,8 +15,6 @@ body {
 body {
     background-color: rgba(255, 240, 245, 0.8);
     font-family: Georgia, 'Times New Roman', Times, serif;
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .img {
@@ -33,10 +31,6 @@ body {
 /* -------------------------
    Navigation bar
    ------------------------- */
-.container {
-    display: flex;
-    flex-wrap: wrap;
-}
 
 .container1 {
     position: fixed;
@@ -47,41 +41,31 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 12px 40px;
 }
 
 .logo img {
-    height: 60px;
-    width: 60px;
-    margin-left: 57px;
-    padding-top: 10px;
-    border-radius: 35px;
-    box-shadow: #333;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
 }
 
 nav {
-    border-radius: 30px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    justify-content: space-between;
-    border: 1px solid white;
-    background-color: white;
-    margin-right: 55px;
     display: flex;
-    align-content: center;
-    box-sizing: border-box;
-    flex-wrap: wrap;
-    z-index: 1000;
-    padding: 10px 50px;
-    width: 80%;
-    top: 0;
-    left: 0;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    background-color: white;
+    padding: 15px 25px;
+    border-radius: 40px;
 }
 
 .nav-link {
-    justify-content: space-between;
-    display: flex;
     text-decoration: none;
-    font-size: large;
+    font-size: 16px;
+    font-weight: 500;
     color: gray;
+    transition: color 0.3s;
 }
 
 .nav-link:hover {
@@ -165,10 +149,10 @@ h1 {
 .luxury h1 {
     width: 100%;
     padding: 20px;
-    font-size: 50px;
-    margin-bottom: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
+    font-size: 55px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
 }
 
 .luxury p {
@@ -178,67 +162,6 @@ h1 {
     font-family: "Shippori Mincho", serif;
 }
 
-/* -------------------------
-   Image Row Section
-   ------------------------- */
-.image-container div {
-    display: flex;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: rgba(162, 97, 97, 0.7);
-    color: white;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-    width: 350px;
-    height: 350px;
-    border-radius: 20px;
-    opacity: 0;
-    transform: translateY(100%);
-    transition: transform 0.7s ease-in-out, opacity 0.5s ease-in-out;
-    font-size: 2em;
-    font-weight: 400;
-}
-
-.image-container:hover div {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.image-container:hover img {
-    filter: brightness(70%);
-}
-
-.image-row {
-    gap: 10px;
-    width: 100%;
-    height: 500px;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.image-container {
-    max-width: 100%;
-    width: 350px;
-    height: 350px;
-    overflow: hidden;
-    position: relative;
-    border-radius: 20px;
-}
-
-.image-container img {
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    transition: filter 0.3s ease-in-out;
-}
-
 .button {
     padding: 15px;
     background-color: bisque;
@@ -246,7 +169,7 @@ h1 {
     text-decoration: none;
     border-radius: 30px;
     border: 1px solid gray;
-    margin-top: 10px;
+    margin-top: 50px;
     font-weight: bolder;
 }
 
@@ -258,7 +181,6 @@ h1 {
 /* -------------------------
    Beauty Salon Section
    ------------------------- */
-
 .aboutDetails {
     position: relative;
     padding-bottom: 50px;
@@ -275,9 +197,8 @@ h1 {
 }
 
 .container3 {
-    max-width: 100%;
-    border-radius: 20px;
-    margin: 0 50px 0 57px;
+    max-width: 94.5%;
+    margin: 100px auto 0;
 }
 
 .container3 h1 {
@@ -300,7 +221,6 @@ h1 {
 .container3 p {
     color: grey;
     line-height: 150%;
-    padding-right: 50%;
     font-size: 16px;
     margin-top: 18px;
 }
@@ -345,7 +265,6 @@ summary::-webkit-details-marker {
     display: none;
 }
 
-
 h3 {
     color: rgb(172, 70, 70);
     font-family: "Shippori Mincho", serif;
@@ -366,13 +285,13 @@ h3.animate {
    Booking Form Section
    ------------------------- */
 .container6 {
-    margin: 50px 0 0 57px;
+    margin: 100px auto;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     background-color: rgba(255, 240, 245, 0.8);
-    width: 1185px;
+    width: 94%;
     padding: 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     max-width: 100%;
@@ -395,24 +314,29 @@ h3.animate {
     overflow: hidden;
 }
 
+.para img {
+    border-radius: 30px;
+    height: 490px;
+    width: 490px;
+    margin-top: 30px;
+}
+
 .para {
     color: gray;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    float: left;
-    justify-items: center;
-    align-content: space-around;
     width: 500px;
-    margin-top: 50px;
     line-height: 150%;
+    align-self: flex-start;
+    margin-top: 20px;
 }
 
 .appointment-form input,
 .appointment-form textarea {
     width: 100%;
     padding: 10px;
-    margin: 10px 0;
+    margin: 20px 0;
     border: 1px solid grey;
     border-radius: 15px;
     font-size: 14px;
@@ -444,11 +368,8 @@ h3.animate {
     position: fixed;
     top: 20px;
     right: 20px;
-    /* background-color: #d4edda; */
     background-color: white;
     color: #155724;
-    /* background-color: rgba(255, 240, 245, 0.8);
-    color: #8a5a42; */
     padding: 15px 20px;
     border-radius: 5px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -475,71 +396,32 @@ h3.animate {
 Reviews section 
 -----------------------*/
 .reviews-container {
-    max-width: 300px;
+    max-width: 50%;
     overflow: hidden;
     position: relative;
     display: flex;
     align-items: center;
-    margin: 53px 10px 10px 180px;
     padding-bottom: 20px;
 }
 
 .reviews {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    gap: 20px;
-}
-
-.arrow {
-    cursor: pointer;
-    font-size: 50px;
-    color: brown;
-    position: absolute;
-    z-index: 10;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: color 0.3s ease-in-out, opacity 0.3s;
-    opacity: 0;
-}
-
-.reviews-container:hover .arrow {
-    opacity: 1;
-}
-
-.arrow:hover {
-    color: bisque;
-}
-
-.arrow.left {
-    left: -30px;
-}
-
-.arrow.right {
-    right: -30px;
-}
-
-.feedback {
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    height: 400px;
-    width: 300px;
-    overflow: hidden;
-    padding: 20px;
-    margin: 50px 0;
-    border-radius: 30px;
-    background: white;
-    line-height: 30px;
+    gap: 50px;
 }
 
 .container7 {
     display: flex;
     flex-wrap: wrap;
     position: relative;
+    margin: 100px auto 0 auto;
+    width: 93.5%;
 }
 
 .testimonial {
     flex-direction: column;
-    margin: 100px 0 0 58px;
-    width: 45%;
+    margin: 0 auto;
+    width: 49%;
 }
 
 .testimonial p {
@@ -564,30 +446,13 @@ Reviews section
     font-size: 50px;
 }
 
-/* Reviews container */
-.reviews-container {
-    max-width: 300px;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    align-items: center;
-    margin: 53px 0 0 300px;
-    scroll-snap-type: x mandatory;
-}
-
-.reviews {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    scroll-snap-align: start;
-}
-
 .feedback {
     box-sizing: border-box;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     height: 400px;
-    width: 300px;
+    width: 400px;
     overflow: hidden;
-    padding: 20px;
+    padding: 40px;
     border-radius: 30px;
     background: white;
     line-height: 30px;
@@ -604,15 +469,15 @@ Reviews section
 }
 
 .laura {
-    margin-top: 70px;
+    margin-top: 45px;
 }
 
 .emily {
-    margin-top: 100px;
+    margin-top: 70px;
 }
 
 .faith {
-    margin-top: 160px;
+    margin-top: 130px;
 }
 
 .reviewer-name {
@@ -641,6 +506,7 @@ Reviews section
     font-size: 40px;
     color: brown;
     cursor: pointer;
+    z-index: 10;
 }
 
 .arrow.prev {
@@ -674,6 +540,7 @@ Reviews section
     background-size: cover;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 100px;
 }
 
 .unlock-secrets::before {
@@ -700,8 +567,6 @@ Reviews section
     padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .white-background h1 {
@@ -743,16 +608,16 @@ Reviews section
    Skills and Ability Section
    ------------------------- */
 .skills {
-    margin: 100px 55px 85px 56px;
+    margin: 100px auto 200px auto;
     flex-direction: column;
-    float: left;
+    width: 94%;
 }
 
 .ability {
     float: right;
-    width: 45%;
+    width: 47%;
     border-radius: 30px;
-    height: 450px;
+    height: 47%;
 }
 
 .percentage {
@@ -763,7 +628,7 @@ Reviews section
 }
 
 .section2 span {
-    margin-top: 40px;
+    margin-top: 20px;
     color: rgb(172, 70, 70);
     font-family: "Shippori Mincho", serif;
     font-size: large;
@@ -786,10 +651,11 @@ Reviews section
 .section2 {
     float: left;
     width: 42%;
+    margin-bottom: 50px;
 }
 
 .section {
-    width: 42%;
+    width: 50%;
 }
 
 .progress {
@@ -815,7 +681,7 @@ Reviews section
     align-items: center;
     margin-bottom: 5px;
     max-width: 600px;
-    line-height: 1px;
+    line-height: 10px;
 }
 
 .skill p {
@@ -833,7 +699,7 @@ Reviews section
    ------------------------- */
 footer {
     clear: both;
-    background-color: #e5b1a1;
+    background-color: #e5b1a1;                     
 }
 
 .clearfix::after {
@@ -846,15 +712,18 @@ footer {
     display: flex;
     justify-content: space-between;
     line-height: 50px;
-    width: 1200px;
-    margin: auto;
+    width: 95%;
+    margin: 150px auto 0 auto;
     flex-wrap: wrap;
-    margin: 0 50px;
+}
+
+.info {
+    line-height: 28px;
 }
 
 .footer-section h2 {
     font-size: 30px;
-    margin-bottom: 15px;
+    margin-top: 20px;
     font-family: "Shippori Mincho", serif;
 }
 
@@ -886,7 +755,7 @@ footer {
     justify-content: space-between;
     background-color: #d09989;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px;
 }
 
 .footer-bottom p {
@@ -931,261 +800,296 @@ footer {
    Mobile Responsiveness Overrides (Shorthand Margins & Image Fix)
    ========================= */
 @media screen and (max-width: 767px) {
-
-    /* Ensure containers do not exceed viewport width */
-    .container,
-    .container1,
-    nav,
-    .container6,
-    .footer-container {
-        max-width: 100vw;
-    }
-
-    /* Body */
+    /* General Styles */
     body {
-        display: block;
+        font-size: 14px;
     }
 
-    /* Navigation adjustments */
+    .container {
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Navigation Bar */
     .container1 {
-        position: relative;
-        padding: 10px 0;
-    }
-
-    .logo img {
-        margin: 0 0 0 10px;
+        flex-direction: row;
+        padding: 10px;
     }
 
     nav {
-        width: 95%;
-        padding: 10px 15px;
-        margin: 10px auto;
+        flex-direction: row;
+        gap: 10px;
+        padding: 10px;
+        border-radius: 10px;
     }
 
     .nav-link {
-        font-size: medium;
-        margin: 0 5px;
+        font-size: 14px;
     }
 
-    /* Hero Section adjustments */
+    /* Hero Section */
     .hero {
         padding: 50px 20px;
         height: auto;
     }
 
     .luxury h1 {
-        padding: 10px;
-        margin: 0 10px 20px;
-        font-size: 30px;
+        font-size: 32px;
     }
 
     .luxury p {
-        margin: 0 10px 20px;
-        font-size: 20px;
+        font-size: 18px;
+        margin: 0 20px;
     }
 
-    /* Image Row adjustments with Image Fix */
-    .image-container {
-        width: 90vw;
-        /* Use 90% of the viewport width */
-        height: 90vw;
-        /* Maintain a square shape */
-    }
-
-    .image-container div {
-        width: 100%;
-        height: 100%;
-        font-size: 1.5em;
-        /* Slightly reduce font size for mobile */
-    }
-
-    /* Option 1: Stack images vertically */
-    .image-row {
-        flex-direction: column;
-        height: auto;
-        gap: 20px;
+    .button {
         padding: 10px;
-        justify-content: center;
+        font-size: 14px;
     }
 
-    /* Beauty Salon Section adjustments */
-    .container3 {
-        margin: 0 10px;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .image {
+    /* Image Sections */
+    .image-container {
         width: 100%;
-        float: none;
-        margin: 10px 0;
+        height: auto;
     }
 
-    .container3 p,
-    ul {
-        padding-right: 0;
-    }
-
-    /* Booking Form Section adjustments */
-    .container6 {
-        width: 95%;
-        margin: 85px auto 0;
-        padding: 20px 10px;
-    }
-
-    .appointment-form,
-    .para {
+    .image-container img {
         width: 100%;
-        float: none;
-        margin: 10px 0;
+        height: auto;
     }
 
-    .container6 label {
-        width: 100%;
+    .flex-container.container3 {
+        display: block;
         padding: 20px;
     }
 
-    /* Reviews Section adjustments */
-    .reviews-container {
-        width: fit-content;
-        /* Adjust width for mobile screens */
-        max-width: 380px;
-        /* Keep it centered */
-        margin: 20px auto;
-        /* Center the container */
-        overflow: hidden;
+    .flex-container.container3 img.image {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
     }
 
-    .reviews {
+    .flex-container.container3 span.salon,
+    .flex-container.container3 h1,
+    .flex-container.container3 p,
+    .flex-container.container3 ul,
+    .flex-container.container3 details {
+        display: block;
+        width: 100%;
+        margin: 0 auto 20px auto;
+    }
+
+    .flex-container.container3 h1 {
+        font-size: 28px;
+    }
+
+    .flex-container.container3 p,
+    .flex-container.container3 ul,
+    .flex-container.container3 details {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    /* Container that wraps the entire testimonial section */
+    .container7 {
         display: flex;
-        transition: transform 0.5s ease-in-out;
-        gap: 10px;
-    }
-
-    .feedback {
-        flex: 0 0 100%;
-        width: fit-content;
-        padding: 15px;
-    }
-
-    /* Adjust arrow sizes and positions for mobile */
-    .arrow {
-        width: 35px;
-        height: 35px;
-        font-size: 25px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    .arrow.left {
-        left: 0px;
-        /* Keep inside the screen */
-    }
-
-    .arrow.right {
-        right: 0px;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
     }
 
     .testimonial {
-        margin: 20px auto;
-        width: 90%;
-        text-align: start;
-    }
-
-    .testimonial-container {
-        width: 90%;
-        max-width: 350px;
-        margin: 0 auto;
+        width: 100%;
         text-align: center;
-        padding: 15px;
-        font-size: 1.4rem;
+        margin-bottom: 20px;
     }
 
-    .testimonial-container h1 {
-        font-size: 2rem;
+    .testimonial .testimonial-container {
+        font-size: 18px;
+        font-weight: bold;
+        color: rgb(172, 70, 70);
+        display: block;
         margin-bottom: 10px;
     }
 
-    .testimonial-container::after {
-        width: 40px;
-        height: 3px;
+    .testimonial h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
     }
 
-    /* Unlock Secrets Section adjustments */
+    .testimonial p {
+        font-size: 14px;
+        color: grey;
+        padding: 0 10px;
+        margin-bottom: 20px;
+    }
+
+    .reviews-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding: 10px;
+    }
+
+    .reviews-container .reviewer-name {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .reviews-container .arrow {
+        display: none;
+    }
+
+    .reviews-container .reviews {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .reviews-container .feedback {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+
+    /* Overall skills section container */
+    .skills {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 50px auto;
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    /* Image adjustments: remove float, use full width */
+    .ability {
+        float: none;
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+        margin-bottom: 20px;
+    }
+
+    /* Make both text sections full-width and remove floats */
+    .section,
+    .section2 {
+        float: none;
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    /* Adjust heading and paragraph sizes */
+    .section h1 {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    .section p {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    /* Skills progress blocks */
+    .skill {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .skill p {
+        width: 100%;
+        margin-bottom: 5px;
+        text-align: left;
+    }
+
+    .progress {
+        width: 100%;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    .percentage {
+        text-align: left;
+        font-size: 14px;
+    }
+
+    /* Booking Form */
+    .container6 {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .para {
+        width: 100%;
+        text-align: center;
+    }
+
+    .para img {
+        width: 100%;
+        height: auto;
+    }
+
+    .appointment-form {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .appointment-form input,
+    .appointment-form textarea {
+        width: 100%;
+    }
+
+    .appointment-form button {
+        width: 100%;
+    }
+
+    /* Reviews Section */
+    .reviews-container {
+        max-width: 100%;
+        flex-direction: column;
+    }
+
+    .testimonial {
+        width: 100%;
+    }
+
+    /* Unlock Secrets Section */
+    .unlock-secrets {
+        height: auto;
+        padding: 40px 10px;
+    }
+
     .white-background {
         width: 90%;
         height: auto;
         padding: 20px;
     }
 
-    /* Skills Section adjustments */
-    .skills {
-        margin: 50px 10px 85px;
-        flex-direction: column;
-        align-items: center;
+    .white-background h1 {
+        font-size: 28px;
     }
 
-    .ability,
-    .section,
-    .section2 {
-        width: 100%;
-        float: none;
-        margin: 10px 0;
-    }
-
-    /* Footer adjustments */
-    .footer-container {
-        width: 95%;
-        margin: 0 auto;
-        padding: 10px;
-    }
-
-    .footer-bottom {
-        display: flex;
-        flex-direction: column;
-        /* Stack items vertically */
-        align-items: center;
-        /* Center container content horizontally */
-        padding: 10px 20px;
-        background-color: #d09989;
-    }
-
-    /* If you have anchor links within the footer */
-    .footer-bottom {
-        background-color: #d09989;
-        padding: 15px 20px;
-        display: flex;
-        flex-direction: column;
-        /* Stack content vertically */
-        align-items: center;
-        /* Center items horizontally */
-        text-align: center;
-        box-sizing: border-box;
-    }
-
-    /* Footer Links: each link appears as a full-width block */
-    .footer-links {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .footer-links a {
-        display: block;
-        /* Stack links vertically */
-        padding: 10px 0;
-        color: white;
-        text-decoration: none;
-    }
-
-    /* Remove the border from the last link */
-    .footer-links a:last-child {
-        padding: 0 0;
-    }
-
-    /* Footer Paragraph styling */
-    .footer-bottom p {
+    .white-background p {
         font-size: 14px;
-        color: white;
-        margin: 0;
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        margin-bottom: 20px;
     }
 }
